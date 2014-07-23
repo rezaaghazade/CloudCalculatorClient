@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,6 +27,8 @@ public class LoginPage extends ServerConn{
     public String userNameStr="";
     public String passWdStr="";
     public JLabel informationLable;
+
+    public ArrayList<ResultSet> personalInfo;
 
     public LoginPage()throws Exception
     {
@@ -97,7 +101,10 @@ public class LoginPage extends ServerConn{
                 {
                     try {
                         getServerApplication().newInstance("org.cloud.server.ConnectToDataBase");
-                        getServerApplication().invokeMethod("authenticity", new Object[]{new String(userNameStr), new String(passWdStr)});
+                        personalInfo= (ArrayList) getServerApplication().invokeMethod("authenticity",
+                                                new Object[]{new String(userNameStr), new String(passWdStr)});
+
+                        System.out.println(personalInfo.get(0).getString(2));
 
                     }catch (Exception ex)
                     {
