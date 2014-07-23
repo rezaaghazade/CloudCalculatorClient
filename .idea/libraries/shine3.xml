@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="shine3">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../LIB/ShineJ2EEFramework 3.0.1/shine3.0" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../LIB/ShineJ2EEFramework 3.0.1/shine3.0/src" />
+      <root url="file://$PROJECT_DIR$/../LIB/ShineJ2EEFramework 3.0.1/shine3.0/webapp/src" />
+      <root url="file://$PROJECT_DIR$/../LIB/ShineJ2EEFramework 3.0.1/shine3.0" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../LIB/ShineJ2EEFramework 3.0.1/shine3.0" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../LIB/ShineJ2EEFramework 3.0.1/shine3.0" recursive="false" type="SOURCES" />
+  </library>
+</component>
