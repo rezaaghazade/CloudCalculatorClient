@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/cloud/client/SectionType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/client/HomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/client/HomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/client/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/client/LoginPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -74,10 +71,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoginPage.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LoginPage.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/client/LoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="50" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="2250">
+            <state line="141" column="50" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.3799682" vertical-offset="1621" max-vertical-offset="2250">
               <folding />
             </state>
           </provider>
@@ -86,7 +83,7 @@
       <file leaf-file-name="HomePage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/client/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="39" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
+            <state line="52" column="10" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1125">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#338#351#0" expanded="true" />
@@ -95,10 +92,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SectionType.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SectionType.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/client/SectionType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="91" selection-end="91" vertical-scroll-proportion="0.11923689" vertical-offset="0" max-vertical-offset="629">
+            <state line="5" column="25" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
               <folding />
             </state>
           </provider>
@@ -594,7 +591,7 @@
       <created>1406110763099</created>
       <updated>1406110763099</updated>
       <workItem from="1406110765731" duration="5525000" />
-      <workItem from="1406150401592" duration="1298000" />
+      <workItem from="1406150401592" duration="2697000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -628,11 +625,15 @@
       <created>1406128945725</created>
       <updated>1406128945725</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Initial commit&#10;">
+      <created>1406151704831</created>
+      <updated>1406151704831</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16207000" />
+    <option name="totallyTimeSpent" value="17606000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -769,16 +770,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/LoginPage.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/SectionType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="50" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="2250">
+        <state line="5" column="25" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/client/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="39" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
+        <state line="52" column="10" selection-start="1648" selection-end="1648" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1125">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#338#351#0" expanded="true" />
@@ -786,9 +787,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/SectionType.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="91" selection-end="91" vertical-scroll-proportion="0.11923689" vertical-offset="0" max-vertical-offset="629">
+        <state line="141" column="50" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.3799682" vertical-offset="1621" max-vertical-offset="2250">
           <folding />
         </state>
       </provider>
