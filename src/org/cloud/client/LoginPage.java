@@ -98,7 +98,10 @@ public class LoginPage extends ServerConn{
 
                 if(checkInput(userNameStr,passWdStr))
                 {
+                    MD5 md5Obj=new MD5();
+                    passWdStr=md5Obj.md5(passWdStr);
                     try {
+
                         getServerApplication().newInstance("org.cloud.server.ConnectToDataBase");
                         personalArray= (ArrayList) getServerApplication().invokeMethod("authenticity",
                                                 new Object[]{new String(userNameStr), new String(passWdStr)});

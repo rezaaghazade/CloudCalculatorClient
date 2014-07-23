@@ -8,7 +8,8 @@ import java.security.NoSuchAlgorithmException;
  * Created by reza on 7/23/14.
  */
 public class MD5 {
-    public static String md5(String input) {
+
+    public String md5(String input) {
         String md5 = null;
         if(null == input) return null;
         try {
@@ -24,8 +25,8 @@ public class MD5 {
         }
         return md5;
     }
-    /*public static void main(String[] args) {
+   /* public static void main(String[] args) {
         MD5 obj=new MD5();
-        System.out.println(obj.md5("1352"));
+        System.out.println(obj.md5(""));
     }*/
 }

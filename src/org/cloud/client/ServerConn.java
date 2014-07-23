@@ -12,13 +12,14 @@ public class ServerConn {
 
     static {
         try {
+
             serverApplication=new Application().receive("localhost","cloudCalculator");
+
         }catch (Exception e)
         {
             System.out.println("Error in Static Block : "+e.getMessage());
         }
     }
-
     public ServerApplication getServerApplication()
     {
         return serverApplication;

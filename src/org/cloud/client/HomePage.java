@@ -7,8 +7,14 @@ import java.util.ArrayList;
  */
 public class HomePage extends ServerConn {
 
-    public HomePage(ArrayList personalArray) {
+    public ArrayList personalInfo=new ArrayList();
 
+    public HomePage(ArrayList personalArray) {
+        this.personalInfo=personalArray;
+
+        System.out.println(personalInfo.get(0));
+        System.out.println(personalInfo.get(1));
+        System.out.println(personalInfo.get(2));
     }
 
 }
