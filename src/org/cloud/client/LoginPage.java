@@ -17,7 +17,6 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class LoginPage extends ServerConn{
-    int x;
     public JFrame introFrame;
     public JTextField userNameTextField;
     public JPasswordField passwordTextField;
@@ -28,7 +27,7 @@ public class LoginPage extends ServerConn{
     public String passWdStr="";
     public JLabel informationLable;
 
-    public ArrayList<ResultSet> personalInfo;
+    public ArrayList personalArray;
 
     public LoginPage()throws Exception
     {
@@ -101,14 +100,21 @@ public class LoginPage extends ServerConn{
                 {
                     try {
                         getServerApplication().newInstance("org.cloud.server.ConnectToDataBase");
-                        personalInfo= (ArrayList) getServerApplication().invokeMethod("authenticity",
+                        personalArray= (ArrayList) getServerApplication().invokeMethod("authenticity",
                                                 new Object[]{new String(userNameStr), new String(passWdStr)});
 
-                        System.out.println(personalInfo.get(0).getString(2));
+                        if (personalArray.size()==0)
+                        {
+                            informationLable.setText("CardNumber Or Password is Not in DB");
+                        }else
+                        {
+                            introFrame.dispose();
+                            HomePage homePage=new HomePage(personalArray);
+                        }
 
                     }catch (Exception ex)
                     {
-                        System.out.println("errror : "+ex.getMessage());
+                        System.out.println("error : "+ex.getMessage());
                     }
                 }
             }
@@ -123,7 +129,7 @@ public class LoginPage extends ServerConn{
         }
         catch (Exception e)
         {
-            informationLable.setText("CardNumber & Password is Not Correct");
+            informationLable.setText("UserName Or Password is Not in Correct Style");
             return false;
         }
     }
