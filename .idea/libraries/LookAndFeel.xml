@@ -3,7 +3,7 @@
     <CLASSES />
     <JAVADOC />
     <SOURCES>
-      <root url="file://$PROJECT_DIR$/../LIB/LookAndFeel" />
+      <root url="file://$PROJECT_DIR$/../../LIB/LookAndFeel" />
     </SOURCES>
   </library>
 </component>
