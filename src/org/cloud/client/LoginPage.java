@@ -2,6 +2,7 @@ package org.cloud.client;
 
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -31,6 +32,10 @@ public class LoginPage extends ServerConn{
 
     public LoginPage()throws Exception
     {
+        /*Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        double width = screenSize.getWidth();
+        double height = screenSize.getHeight();*/
+
         introFrame=new JFrame("ATM");
         introFrame.setBounds(450,150,180,70);
         introFrame.getContentPane().setLayout(new RiverLayout());
@@ -96,28 +101,35 @@ public class LoginPage extends ServerConn{
                 userNameStr=userNameTextField.getText();
                 passWdStr=String.valueOf(passwordTextField.getPassword());
 
+                try {
+                    getServerApplication().newInstance("org.cloud.server.ConnectToDataBase");
+                }catch (Exception ex)
+                {
+                    String message = "Connection is Closed";
+                    JOptionPane.showMessageDialog(new JFrame(), message, "Error",JOptionPane.ERROR_MESSAGE);
+                }
+
                 if(checkInput(userNameStr,passWdStr))
                 {
                     MD5 md5Obj=new MD5();
                     passWdStr=md5Obj.md5(passWdStr);
                     try {
-
-                        getServerApplication().newInstance("org.cloud.server.ConnectToDataBase");
-                        personalArray= (ArrayList) getServerApplication().invokeMethod("authenticity",
+                        personalArray= (ArrayList) getServerApplication().invokeMethod("Authenticity",
                                                 new Object[]{new String(userNameStr), new String(passWdStr)});
 
                         if (personalArray.size()==0)
                         {
-                            informationLable.setText("CardNumber Or Password is Not in DB");
+                            informationLable.setText("CardNumber Or Password is InCorrect");
                         }else
                         {
                             introFrame.dispose();
-                            HomePage homePage=new HomePage(personalArray);
+                            //HomePage homePage=new HomePage(personalArray);
                         }
 
                     }catch (Exception ex)
                     {
-                        System.out.println("error : "+ex.getMessage());
+                        String message = "Connection is Closed890";
+                        JOptionPane.showMessageDialog(new JFrame(), message, "Error",JOptionPane.ERROR_MESSAGE);
                     }
                 }
             }
@@ -132,7 +144,7 @@ public class LoginPage extends ServerConn{
         }
         catch (Exception e)
         {
-            informationLable.setText("UserName Or Password is Not in Correct Style");
+            informationLable.setText("Type UserName Or Password In True Style");
             return false;
         }
     }
