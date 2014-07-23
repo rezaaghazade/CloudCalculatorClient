@@ -1,5 +1,6 @@
 package org.cloud.client;
 
+import org.j2os.shine.util.reflect.Application;
 import org.j2os.shine.util.reflect.ServerApplication;
 
 /**
@@ -8,6 +9,15 @@ import org.j2os.shine.util.reflect.ServerApplication;
 public class ServerConn {
 
     public static ServerApplication serverApplication=null;
+
+    static {
+        try {
+            serverApplication=new Application().receive("localhost","cloudCalculator");
+        }catch (Exception e)
+        {
+            System.out.println("Error in Static Block : "+e.getMessage());
+        }
+    }
 
     public ServerApplication getServerApplication()
     {

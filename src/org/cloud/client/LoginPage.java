@@ -14,7 +14,7 @@ import java.awt.event.KeyListener;
  * Time: 8:02 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LoginPage {
+public class LoginPage extends ServerConn{
     int x;
     public JFrame introFrame;
     public JTextField userNameTextField;
@@ -22,14 +22,14 @@ public class LoginPage {
     public JButton cardNumClearButton;
     public JButton passwordClearButton;
     public JButton enterButton;
-    public String cardNumStr="";
+    public String userNameStr="";
     public String passWdStr="";
     public JLabel informationLable;
 
     public LoginPage()throws Exception
     {
         introFrame=new JFrame("ATM");
-        introFrame.setBounds(450,150,180,50);
+        introFrame.setBounds(450,150,180,70);
         introFrame.getContentPane().setLayout(new RiverLayout());
         introFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         introFrame.setVisible(true);
@@ -68,44 +68,11 @@ public class LoginPage {
         JLabel tempLable=new JLabel();
         introFrame.getContentPane().add("p center",tempLable);
         introFrame.pack();
-        userNameTextField.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                if (cardNumStr.length() < 16) {
-                    cardNumStr = cardNumStr + e.getKeyChar();
-                } else {
-                    userNameTextField.setText(cardNumStr);
-                }
-            }
-            public void keyPressed(KeyEvent e) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-            public void keyReleased(KeyEvent e) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-        });
-        passwordTextField.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                if(passWdStr.length()<10){
-                    passWdStr=passWdStr+e.getKeyChar();
-                }
-                else
-                {
-                    passwordTextField.setText(passWdStr);
-                }
-            }
-            public void keyPressed(KeyEvent e) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-            public void keyReleased(KeyEvent e) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-        });
+
         cardNumClearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cardNumStr = "";
+                userNameStr = "";
                 userNameTextField.setText("");
                 informationLable.setText("");
             }
@@ -119,46 +86,16 @@ public class LoginPage {
             }
         });
 
+        userNameStr=userNameTextField.getText();
+        passWdStr=String.valueOf(passwordTextField.getPassword());
 
         enterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 ///*//******************Enter Button
-                if(checkInput(cardNumStr,passWdStr))
+                if(checkInput(userNameStr,passWdStr))
                 {
 
-                    int i = 0;
-                    try
-                    {
-
-                      /*  if(i==1)
-                        {
-                            informationLable.setText("Cant Get Query From DB,Try Again");
-                        }*/
-                        if(i==1)
-                        {
-                            informationLable.setText("Incorrect Password");
-                        }
-                        else if(i==2)
-                        {
-                            informationLable.setText("You Enter 3 wrong Password,Your Card is Locked");
-                        }
-                        else if(i==0)
-                        {
-                            informationLable.setText("Your Account Is not In DataBase");
-                        }
-                    }
-                    catch (Exception elx)
-                    {
-
-                        try {
-
-                        } catch (Exception ee) {
-                            System.out.println("Error in Changing Type Object to Result SEt "+ee.getMessage());
-                        }
-                        introFrame.dispose();
-
-                    }
                 }
             }
         });
@@ -172,7 +109,7 @@ public class LoginPage {
         }
         catch (Exception e)
         {
-            informationLable.setText("CardNumber & Password is Not in right Style");
+            informationLable.setText("CardNumber & Password is Not Correct");
             return false;
         }
     }
