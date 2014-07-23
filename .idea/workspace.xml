@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/LookAndFeel.xml" afterPath="$PROJECT_DIR$/.idea/libraries/LookAndFeel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/riverlayout.xml" afterPath="$PROJECT_DIR$/.idea/libraries/riverlayout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/shine3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/shine3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/cloud/client/SectionType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/client/HomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/client/HomePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/client/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/client/LoginPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -77,43 +77,37 @@
       <file leaf-file-name="LoginPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/client/LoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="42" selection-start="4373" selection-end="4373" vertical-scroll-proportion="0.0" vertical-offset="1198" max-vertical-offset="2295">
-              <folding>
-                <element signature="e#3541#5236#0" expanded="true" />
-                <element signature="e#5225#5226#0" expanded="true" />
-                <marker date="1406127706861" expanded="true" signature="4330:4947" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePage.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/cloud/client/HomePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="10" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.64228934" vertical-offset="301" max-vertical-offset="930">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="finalProject.USERS" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/937005e0/53538e76-1b6a-4333-a10e-b51ab0b44c3d/finalProject..USERS">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+            <state line="141" column="50" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="2250">
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="HomePage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/cloud/client/HomePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="39" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#338#351#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SectionType.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/cloud/client/SectionType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="25" selection-start="91" selection-end="91" vertical-scroll-proportion="0.11923689" vertical-offset="0" max-vertical-offset="629">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MD5.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/client/MD5.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="36" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+            <state line="29" column="36" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="570">
               <folding />
             </state>
           </provider>
@@ -122,12 +116,8 @@
       <file leaf-file-name="ServerConn.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/client/ServerConn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-              </folding>
+            <state line="19" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="495">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,6 +139,7 @@
         <option value="$PROJECT_DIR$/src/org/cloud/client/MD5.java" />
         <option value="dbtable:/937005e0/53538e76-1b6a-4333-a10e-b51ab0b44c3d/finalProject..USERS" />
         <option value="$PROJECT_DIR$/src/org/cloud/client/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/client/SectionType.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/client/HomePage.java" />
       </list>
     </option>
@@ -189,7 +180,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,6 +218,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -261,6 +252,11 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1011" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.cloud.client" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.HomePage">
     <configuration default="false" name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -527,12 +523,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -550,6 +540,12 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <list size="3">
@@ -598,6 +594,7 @@
       <created>1406110763099</created>
       <updated>1406110763099</updated>
       <workItem from="1406110765731" duration="5525000" />
+      <workItem from="1406150401592" duration="1298000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -627,11 +624,15 @@
       <created>1406128936038</created>
       <updated>1406128936038</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Initial commit&#10;">
+      <created>1406128945725</created>
+      <updated>1406128945725</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11956000" />
+    <option name="totallyTimeSpent" value="16207000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -657,32 +658,32 @@
     <frame x="0" y="-3" width="1366" height="771" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20166163" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20166163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939025" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47256097" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.22408536" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18277946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.25304878" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3003049" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -708,6 +709,37 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="9" selection-start="4335" selection-end="4335" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="2505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="49" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1125">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#338#351#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/MD5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="36" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/ServerConn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar:///usr/local/jdk1.7.0_45/src.zip!/java/awt/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1145" column="16" selection-start="41092" selection-end="41092" vertical-scroll-proportion="0.33279222" vertical-offset="16100" max-vertical-offset="60300">
@@ -717,9 +749,7 @@
     </entry>
     <entry file="dbDummy://dbtable:/937005e0/53538e76-1b6a-4333-a10e-b51ab0b44c3d/finalProject..USERS">
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90" />
       </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -735,31 +765,31 @@
     <entry file="file://$PROJECT_DIR$/src/org/cloud/client/ServerConn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/client/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="42" selection-start="4373" selection-end="4373" vertical-scroll-proportion="0.0" vertical-offset="1198" max-vertical-offset="2295">
-          <folding>
-            <element signature="e#3541#5236#0" expanded="true" />
-            <element signature="e#5225#5226#0" expanded="true" />
-            <marker date="1406127706861" expanded="true" signature="4330:4947" placeholder="{...}" />
-          </folding>
+        <state line="141" column="50" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="2250">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/client/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="10" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.64228934" vertical-offset="301" max-vertical-offset="930">
+        <state line="42" column="39" selection-start="1293" selection-end="1293" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1125">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#338#351#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/client/SectionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="25" selection-start="91" selection-end="91" vertical-scroll-proportion="0.11923689" vertical-offset="0" max-vertical-offset="629">
+          <folding />
         </state>
       </provider>
     </entry>

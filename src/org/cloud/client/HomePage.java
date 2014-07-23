@@ -11,7 +11,8 @@ import java.util.ArrayList;
  */
 public class HomePage extends ServerConn {
 
-    public ArrayList personalInfo=new ArrayList();
+    //public ArrayList personalInfo=new ArrayList();
+    public ArrayList<SectionType> functionsInfo=new ArrayList<SectionType>();
     public JFrame introFrame;
 
     public JLabel informationlable;
@@ -44,6 +45,18 @@ public class HomePage extends ServerConn {
         introFrame.getContentPane().add("p", informationlable);
 
         introFrame.getContentPane().add("p",new JLabel("Calculation Type :    "));
+
+        try {
+            getServerApplication().newInstance("org.cloud.server.GetFunctions");
+            functionsInfo= (ArrayList) getServerApplication().invokeMethod("GetFunctionsDetail");
+
+            System.out.println("Function size : "+functionsInfo.size());
+        }catch (Exception e)
+        {
+            System.out.println("hei man "+e.getMessage());
+        }
+
+
 
         //getServerApplication().newInstance("")
 

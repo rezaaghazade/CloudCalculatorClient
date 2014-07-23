@@ -102,7 +102,7 @@ public class LoginPage extends ServerConn{
                 passWdStr=String.valueOf(passwordTextField.getPassword());
 
                 try {
-                    getServerApplication().newInstance("org.cloud.server.ConnectToDataBase");
+                    getServerApplication().newInstance("org.cloud.server.Authenticity");
                 }catch (Exception ex)
                 {
                     String message = "Connection is Closed";
@@ -123,7 +123,7 @@ public class LoginPage extends ServerConn{
                         }else
                         {
                             introFrame.dispose();
-                            //HomePage homePage=new HomePage(personalArray);
+                            HomePage homePage=new HomePage();
                         }
 
                     }catch (Exception ex)
