@@ -8,7 +8,7 @@ import org.j2os.shine.util.reflect.ServerApplication;
  */
 public class ServerConn {
 
-    public static ServerApplication serverApplication=null;
+    private static ServerApplication serverApplication=null;
 
     static {
         try {

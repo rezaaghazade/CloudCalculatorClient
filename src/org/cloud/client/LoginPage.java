@@ -86,16 +86,23 @@ public class LoginPage extends ServerConn{
             }
         });
 
-        userNameStr=userNameTextField.getText();
-        passWdStr=String.valueOf(passwordTextField.getPassword());
-
         enterButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ///*//******************Enter Button
+
+                userNameStr=userNameTextField.getText();
+                passWdStr=String.valueOf(passwordTextField.getPassword());
+
                 if(checkInput(userNameStr,passWdStr))
                 {
+                    try {
+                        getServerApplication().newInstance("org.cloud.server.ConnectToDataBase");
+                        getServerApplication().invokeMethod("authenticity", new Object[]{new String(userNameStr), new String(passWdStr)});
 
+                    }catch (Exception ex)
+                    {
+                        System.out.println("errror : "+ex.getMessage());
+                    }
                 }
             }
         });
@@ -103,8 +110,8 @@ public class LoginPage extends ServerConn{
     public boolean checkInput(String cardNum,String passWd)
     {
         try{
-            Double tempNum1=new Double(Double.parseDouble(cardNum));
-            Double tempNum2=new Double(Double.parseDouble(passWd));
+            Integer tempNum1=new Integer(Integer.parseInt(cardNum));
+            Integer tempNum2=new Integer(Integer.parseInt(passWd));
             return true;
         }
         catch (Exception e)
