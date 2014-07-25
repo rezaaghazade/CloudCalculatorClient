@@ -1,13 +1,11 @@
-package org.cloud.client;
+package org.cloud.pages;
 
+import org.cloud.encryption.MD5;
+import org.cloud.connectToServer.ServerConn;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 
 /**
@@ -17,7 +15,7 @@ import java.util.ArrayList;
  * Time: 8:02 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LoginPage extends ServerConn{
+public class LoginPage extends ServerConn {
     public JFrame introFrame;
     public JTextField userNameTextField;
     public JPasswordField passwordTextField;
@@ -102,7 +100,7 @@ public class LoginPage extends ServerConn{
                 passWdStr=String.valueOf(passwordTextField.getPassword());
 
                 try {
-                    getServerApplication().newInstance("org.cloud.server.Authenticity");
+                    getServerApplication().newInstance("org.cloud.database.Authenticity");
                 }catch (Exception ex)
                 {
                     String message = "Connection is Closed";
