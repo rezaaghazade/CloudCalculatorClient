@@ -13,13 +13,6 @@ public class FieldTypeDTO {
     public String funcPrototype;
     public String description;
 
-    public String TOString()
-    {
-        return funcName+" "+funcPrototype+" "+argNum+" "+fieldType;
-
-    }
-    public FieldTypeDTO() {
-    }
     public String getFuncName() {
         return funcName;
     }
@@ -28,28 +21,27 @@ public class FieldTypeDTO {
         this.funcName = funcName;
     }
 
-    public Integer getArgNumber() {
+    public Integer getArgNum() {
         return argNum;
     }
 
-    public void setArgNumber(Integer argNum) {
+    public void setArgNum(Integer argNum) {
         this.argNum = argNum;
     }
 
-    public String getSectionType() {
+    public String getFieldType() {
         return fieldType;
     }
 
-    public void setSectionType(String fieldType) {
+    public void setFieldType(String fieldType) {
         this.fieldType = fieldType;
     }
-
 
     public String getFuncPrototype() {
         return funcPrototype;
     }
 
-    public void setFuncrototype(String funcPrototype) {
+    public void setFuncPrototype(String funcPrototype) {
         this.funcPrototype = funcPrototype;
     }
 
@@ -59,5 +51,14 @@ public class FieldTypeDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String TOString()
+    {
+
+        return funcName+" "+funcPrototype+" "+argNum+" "+fieldType;
+
+    }
+    public FieldTypeDTO() {
     }
 }
