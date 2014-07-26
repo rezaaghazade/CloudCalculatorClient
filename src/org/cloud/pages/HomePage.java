@@ -1,17 +1,14 @@
 package org.cloud.pages;
 
-import com.sun.jndi.url.rmi.rmiURLContext;
 import org.cloud.connectToServer.ServerConn;
 import org.cloud.dto.FieldTypeDTO;
 import se.datadosen.component.RiverLayout;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -26,12 +23,20 @@ public class HomePage extends ServerConn {
     //public ArrayList<SectionType> functionsInfo=new ArrayList<SectionType>();
     public JFrame introFrame;
     public JLabel informationlable;
+
+    public JLabel protoType=new JLabel();
+    public JLabel description=new JLabel();
+    JLabel protoTypelable=new JLabel();
+    JLabel descriptionlable=new JLabel();
+
     public JComboBox calcTypeComboBox;
 
     public ArrayList functionsInfo = new ArrayList();
     public ArrayList<String> fieldTypesArrayList = new ArrayList<String>();
     public HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
+    //ArrayList<String> fieldTypeArrayList=new ArrayList<String>();
     public JPanel jRadioButtonsPanel=new JPanel();
+
     //Clock
     private final JLabel time = new JLabel();
     private final SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
@@ -68,6 +73,9 @@ public class HomePage extends ServerConn {
         introFrame.getContentPane().add("p", new JLabel("Calculation Type    :     "));
         introFrame.getContentPane().add("", new JLabel("              "));
         introFrame.getContentPane().add(" ", calcTypeComboBox);
+        introFrame.getContentPane().add("p p",jRadioButtonsPanel);
+        //introFrame.getContentPane().add("p",new JLabel(" AND :"));
+
 
         try {
             /*getServerApplication().newInstance("org.cloud.database.GetFunctions");
@@ -121,17 +129,43 @@ public class HomePage extends ServerConn {
             calcTypeComboBox.addItem(fieldTypesArrayList.get(i));
             i++;
         }
+
+
         calcTypeComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 jRadioButtonsPanel.removeAll();
-                String item = (String)e.getItem();
+                final String item = (String)e.getItem();
                 if (!(calcTypeComboBox.getSelectedIndex() == 0))
                 {
                     try {
-                        ArrayList tmp=new ArrayList();
-                        tmp=getFuncName(funcGroupedByFieldsArrayList.get(item));
-                        createRadioButtons(tmp);
+                        ArrayList<String> funcNames=new ArrayList<String>();
+                        funcNames=getFuncName(funcGroupedByFieldsArrayList.get(item));
+
+                        //funcGroupedByFieldsArrayList.get(item);
+
+                        int index=0;
+                        ButtonGroup bg = new ButtonGroup();
+                        while (index<funcNames.size())
+                        {
+
+                            final JRadioButton rd=new JRadioButton(funcNames.get(index));
+                            rd.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+
+                                    FieldTypeDTO ftd=new FieldTypeDTO();
+                                    ftd=findFieldType(item,rd.getText());
+
+
+
+
+                                }
+                            });
+                            jRadioButtonsPanel.add(rd);
+                            bg.add(rd);
+                            index++;
+                        }
                     }catch (Exception elx)
                     {
                         System.out.println("hi there : "+elx.getMessage());
@@ -141,8 +175,23 @@ public class HomePage extends ServerConn {
         });
 
     }
-    public ArrayList<String> getFuncName(ArrayList arr)
+    public FieldTypeDTO findFieldType(String itemSelected,String funName)
     {
+        int index=0;
+        ArrayList arrayList=new ArrayList();
+        FieldTypeDTO fieldTypeDTO=new FieldTypeDTO();
+        while (index<funcGroupedByFieldsArrayList.get(itemSelected).size())
+        {
+            if (((FieldTypeDTO)funcGroupedByFieldsArrayList.get(itemSelected).get(index)).getFuncName()==funName)
+            {
+                fieldTypeDTO=((FieldTypeDTO)funcGroupedByFieldsArrayList.get(itemSelected).get(index));
+                System.out.println(fieldTypeDTO.getFuncPrototype());
+            }
+            index++;
+        }
+        return fieldTypeDTO;
+    }
+    public ArrayList<String> getFuncName(ArrayList arr) {
         ArrayList<String> tmp=new ArrayList<String>();
         int index=0;
         while (index<arr.size())
@@ -152,8 +201,9 @@ public class HomePage extends ServerConn {
         }
         return tmp;
     }
-    public void createRadioButtons(ArrayList<String> buttonsName)
-    {
+
+    /*public void createRadioButtons(ArrayList<String> buttonsName) {
+
         int index=0;
         ButtonGroup bg = new ButtonGroup();
         while (index<buttonsName.size())
@@ -169,8 +219,7 @@ public class HomePage extends ServerConn {
             bg.add(rd);
             index++;
         }
-        introFrame.getContentPane().add("p p",jRadioButtonsPanel);
-    }
+    }*/
 
     public void defineFuncForEachField() {
 
@@ -194,7 +243,6 @@ public class HomePage extends ServerConn {
                 }
                 j=0;
                 funcGroupedByFieldsArrayList.put(fieldName,tempArrayList);
-                //System.out.println(((FieldTypeDTO)(funcGroupedByFieldsArrayList.get(fieldName).get(0))).getFuncPrototype());
                 tempArrayList=null;
                 i++;
             }
