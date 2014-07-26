@@ -1,5 +1,6 @@
 package org.cloud.pages;
 
+import com.sun.jndi.url.rmi.rmiURLContext;
 import org.cloud.connectToServer.ServerConn;
 import org.cloud.dto.FieldTypeDTO;
 import se.datadosen.component.RiverLayout;
@@ -29,8 +30,9 @@ public class HomePage extends ServerConn {
 
     public ArrayList functionsInfo = new ArrayList();
     public ArrayList<String> fieldTypesArrayList = new ArrayList<String>();
-    public static HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
+    public HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
 
+    //Clock
     private final JLabel time = new JLabel();
     private final SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
     private int currentSecond;
@@ -111,38 +113,45 @@ public class HomePage extends ServerConn {
         }
         defineFuncForEachField();
 
-        JRadioButton birdButton = new JRadioButton("Bird");
-        //birdButton.setSelected(true);
-        JRadioButton catButton = new JRadioButton("CAt");
-        JRadioButton dogButton = new JRadioButton("dog");
-        JRadioButton rabbitButton = new JRadioButton();
-        JRadioButton pigButton = new JRadioButton();
-
-
-
-        //Group the radio buttons.
-        ButtonGroup group = new ButtonGroup();
-        group.add(birdButton);
-        group.add(catButton);
-        group.add(dogButton);
-        group.add(rabbitButton);
-        group.add(pigButton);
-
-        JPanel jPanel = new JPanel();
-        jPanel.add(birdButton);
-        jPanel.add(catButton);
-        jPanel.add(dogButton);
-        introFrame.getContentPane().add("p p",jPanel);
-
-
 
         calcTypeComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 String item = (String)e.getItem();
+                if (!(calcTypeComboBox.getSelectedIndex() == 0))
+                {
+                    try {
+                        System.out.println(funcGroupedByFieldsArrayList.get(item).size());
+                        //createRadioButtons(getFuncName(funcGroupedByFieldsArrayList.get(item)));
+                    }catch (Exception elx)
+                    {
+                        System.out.println("hi there : "+elx.getCause());
+                    }
+
+                }
+
+                //
 
             }
         });
+
+    }
+    public ArrayList<String> getFuncName(ArrayList arr)
+    {
+        System.out.println("arr.size : "+arr.size());
+        ArrayList<String> tmp=new ArrayList<String>();
+
+        int index=0;
+        while (index<arr.size())
+        {
+            System.out.println(((FieldTypeDTO)arr.get(index)).getFuncName());
+            tmp.add(((FieldTypeDTO)arr.get(index)).getFuncName());
+        }
+        System.out.println("tmp.sizd : "+tmp.size());
+        return tmp;
+    }
+    public void createRadioButtons(ArrayList<String> buttonsName)
+    {
 
     }
 
@@ -151,31 +160,59 @@ public class HomePage extends ServerConn {
         int i = 0;
         int j=0;
         String tmp;
-        ArrayList<FieldTypeDTO> tempArrayList=new ArrayList<FieldTypeDTO>();
-        String fieldName;
-            while (i<fieldTypesArrayList.size())
+        ArrayList tempArrayList=new ArrayList();
+        //final HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
+
+        ArrayList<ArrayList> newArrayList=new ArrayList<ArrayList>();
+        String fieldName="";
+/*            while (i<fieldTypesArrayList.size())
             {
                 fieldName=fieldTypesArrayList.get(i);
-                //System.out.println(fieldName);
+                System.out.println(fieldName);
                 while (j<functionsInfo.size())
                 {
                     if (((FieldTypeDTO) functionsInfo.get(j)).getFieldType()==fieldName)
                     {
                         System.out.println("equal : "+i+j);
-                        tempArrayList.add((FieldTypeDTO) functionsInfo.get(j));
+                        tempArrayList.add(functionsInfo.get(j));
                     }
                     j++;
                 }
                 j=0;
                 funcGroupedByFieldsArrayList.put(fieldName,tempArrayList);
-                fieldName=null;
+                //newArrayList.add(tempArrayList);
+                //System.out.println(((FieldTypeDTO)(funcGroupedByFieldsArrayList.get(fieldName).get(0))).getFuncPrototype());
                 tempArrayList.clear();
                 i++;
+            }*/
+
+        for (;i<fieldTypesArrayList.size();i++)
+        {
+            fieldName=fieldTypesArrayList.get(i);
+            System.out.println(fieldName);
+            for (;j<functionsInfo.size();j++)
+            {
+                if (((FieldTypeDTO) functionsInfo.get(j)).getFieldType()==fieldName)
+                {
+                    System.out.println("equal : "+i+j);
+                    tempArrayList.add(functionsInfo.get(j));
+                }
             }
+            j=0;
+            funcGroupedByFieldsArrayList.put(fieldName,tempArrayList);
+            //newArrayList.add(tempArrayList);
+            //System.out.println(((FieldTypeDTO)(funcGroupedByFieldsArrayList.get(fieldName).get(0))).getFuncPrototype());
+            tempArrayList.clear();
+
+        }
+
+        //System.out.println(((FieldTypeDTO)(funcGroupedByFieldsArrayList.get("PHYSIC").get(0))).getFuncPrototype());
+        //this.funcGroupedByFieldsArrayList=funcGroupedByFieldsArrayList;
+        //System.out.println(this.funcGroupedByFieldsArrayList.size());
+        //System.out.println(this.funcGroupedByFieldsArrayList.get(fieldName).size());
 
     }
-    public void show()
-    {
+    public void show() {
         int index=0;
         ArrayList arr=new ArrayList();
         while (index<funcGroupedByFieldsArrayList.size())
