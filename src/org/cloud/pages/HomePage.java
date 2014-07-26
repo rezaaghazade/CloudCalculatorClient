@@ -31,7 +31,7 @@ public class HomePage extends ServerConn {
     public ArrayList functionsInfo = new ArrayList();
     public ArrayList<String> fieldTypesArrayList = new ArrayList<String>();
     public HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
-
+    public JPanel jRadioButtonsPanel=new JPanel();
     //Clock
     private final JLabel time = new JLabel();
     private final SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
@@ -103,56 +103,73 @@ public class HomePage extends ServerConn {
         sectionTypeDTO.setDescription("a-b");
         functionsInfo.add(sectionTypeDTO);
 
+        sectionTypeDTO = new FieldTypeDTO();
+        sectionTypeDTO.setFuncName("Density");
+        sectionTypeDTO.setFuncPrototype("Public Density(Double mass,Double Volume)");
+        sectionTypeDTO.setArgNum(2);
+        sectionTypeDTO.setFieldType("PHYSIC");
+        sectionTypeDTO.setDescription("mass/volume");
+        functionsInfo.add(sectionTypeDTO);
+
         //fill Field comboBox up
         defineSectionType();
+        defineFuncForEachField();
+
         calcTypeComboBox.addItem("                                                    ");
         int i = 0;
         while (i < fieldTypesArrayList.size()) {
             calcTypeComboBox.addItem(fieldTypesArrayList.get(i));
             i++;
         }
-        defineFuncForEachField();
-
-
         calcTypeComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
+                jRadioButtonsPanel.removeAll();
                 String item = (String)e.getItem();
                 if (!(calcTypeComboBox.getSelectedIndex() == 0))
                 {
                     try {
-                        System.out.println(funcGroupedByFieldsArrayList.get(item).size());
-                        //createRadioButtons(getFuncName(funcGroupedByFieldsArrayList.get(item)));
+                        ArrayList tmp=new ArrayList();
+                        tmp=getFuncName(funcGroupedByFieldsArrayList.get(item));
+                        createRadioButtons(tmp);
                     }catch (Exception elx)
                     {
-                        System.out.println("hi there : "+elx.getCause());
+                        System.out.println("hi there : "+elx.getMessage());
                     }
-
                 }
-
-                //
-
             }
         });
 
     }
     public ArrayList<String> getFuncName(ArrayList arr)
     {
-        System.out.println("arr.size : "+arr.size());
         ArrayList<String> tmp=new ArrayList<String>();
-
         int index=0;
         while (index<arr.size())
         {
-            System.out.println(((FieldTypeDTO)arr.get(index)).getFuncName());
             tmp.add(((FieldTypeDTO)arr.get(index)).getFuncName());
+            index++;
         }
-        System.out.println("tmp.sizd : "+tmp.size());
         return tmp;
     }
     public void createRadioButtons(ArrayList<String> buttonsName)
     {
-
+        int index=0;
+        ButtonGroup bg = new ButtonGroup();
+        while (index<buttonsName.size())
+        {
+            final JRadioButton rd=new JRadioButton(buttonsName.get(index));
+            rd.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    System.out.println(rd.getText());
+                }
+            });
+            jRadioButtonsPanel.add(rd);
+            bg.add(rd);
+            index++;
+        }
+        introFrame.getContentPane().add("p p",jRadioButtonsPanel);
     }
 
     public void defineFuncForEachField() {
@@ -160,15 +177,12 @@ public class HomePage extends ServerConn {
         int i = 0;
         int j=0;
         String tmp;
-        ArrayList tempArrayList=new ArrayList();
-        //final HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
-
-        ArrayList<ArrayList> newArrayList=new ArrayList<ArrayList>();
         String fieldName="";
-/*            while (i<fieldTypesArrayList.size())
+            while (i<fieldTypesArrayList.size())
             {
+                ArrayList tempArrayList=new ArrayList();
                 fieldName=fieldTypesArrayList.get(i);
-                System.out.println(fieldName);
+                //System.out.println(fieldName);
                 while (j<functionsInfo.size())
                 {
                     if (((FieldTypeDTO) functionsInfo.get(j)).getFieldType()==fieldName)
@@ -180,38 +194,12 @@ public class HomePage extends ServerConn {
                 }
                 j=0;
                 funcGroupedByFieldsArrayList.put(fieldName,tempArrayList);
-                //newArrayList.add(tempArrayList);
                 //System.out.println(((FieldTypeDTO)(funcGroupedByFieldsArrayList.get(fieldName).get(0))).getFuncPrototype());
-                tempArrayList.clear();
+                tempArrayList=null;
                 i++;
-            }*/
-
-        for (;i<fieldTypesArrayList.size();i++)
-        {
-            fieldName=fieldTypesArrayList.get(i);
-            System.out.println(fieldName);
-            for (;j<functionsInfo.size();j++)
-            {
-                if (((FieldTypeDTO) functionsInfo.get(j)).getFieldType()==fieldName)
-                {
-                    System.out.println("equal : "+i+j);
-                    tempArrayList.add(functionsInfo.get(j));
-                }
             }
-            j=0;
-            funcGroupedByFieldsArrayList.put(fieldName,tempArrayList);
-            //newArrayList.add(tempArrayList);
-            //System.out.println(((FieldTypeDTO)(funcGroupedByFieldsArrayList.get(fieldName).get(0))).getFuncPrototype());
-            tempArrayList.clear();
-
-        }
-
-        //System.out.println(((FieldTypeDTO)(funcGroupedByFieldsArrayList.get("PHYSIC").get(0))).getFuncPrototype());
-        //this.funcGroupedByFieldsArrayList=funcGroupedByFieldsArrayList;
-        //System.out.println(this.funcGroupedByFieldsArrayList.size());
-        //System.out.println(this.funcGroupedByFieldsArrayList.get(fieldName).size());
-
     }
+
     public void show() {
         int index=0;
         ArrayList arr=new ArrayList();
