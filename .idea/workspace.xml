@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/dto/FieldTypeDTO.java" afterPath="$PROJECT_DIR$/src/org/cloud/dto/FieldTypeDTO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/HomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/HomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -77,14 +74,29 @@
       <file leaf-file-name="HomePage.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="32" selection-start="4683" selection-end="4683" vertical-scroll-proportion="0.40381557" vertical-offset="1576" max-vertical-offset="3360">
+            <state line="207" column="0" selection-start="7652" selection-end="7652" vertical-scroll-proportion="0.42766297" vertical-offset="2836" max-vertical-offset="3465">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#991#1010#0" expanded="true" />
-                <element signature="e#5119#5293#0" expanded="true" />
-                <element signature="e#5282#5283#0" expanded="true" />
+                <element signature="e#1027#1046#0" expanded="true" />
+                <element signature="e#4413#5086#0" expanded="true" />
+                <element signature="e#5075#5076#0" expanded="true" />
+                <element signature="e#5255#5263#0" expanded="true" />
+                <element signature="e#5958#5969#0" expanded="true" />
                 <element signature="method#show#0;class#HomePage#0" expanded="false" />
+                <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+                <element signature="method#main#0;class#HomePage#0" expanded="false" />
+                <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+                <element signature="method#start#0;class#HomePage#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="13" selection-start="5034" selection-end="5034" vertical-scroll-proportion="0.0" vertical-offset="1441" max-vertical-offset="2070">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -733,7 +745,7 @@
       <workItem from="1406255987787" duration="1907000" />
       <workItem from="1406257965809" duration="5736000" />
       <workItem from="1406374092090" duration="7265000" />
-      <workItem from="1406381425254" duration="2104000" />
+      <workItem from="1406381425254" duration="5508000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -779,11 +791,19 @@
       <created>1406261772178</created>
       <updated>1406261772178</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Initial commit&#10;">
+      <created>1406383540325</created>
+      <updated>1406383540325</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Initial commit&#10;">
+      <created>1406386894624</created>
+      <updated>1406386894624</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39899000" />
+    <option name="totallyTimeSpent" value="43303000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -865,10 +885,16 @@
         <state line="145" column="48" selection-start="5614" selection-end="5614" vertical-scroll-proportion="0.0" vertical-offset="2175" max-vertical-offset="3345">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -888,10 +914,16 @@
         <state line="96" column="21" selection-start="3790" selection-end="3790" vertical-scroll-proportion="0.0" vertical-offset="1245" max-vertical-offset="2340">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -956,10 +988,16 @@
         <state line="76" column="49" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1425">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -996,10 +1034,16 @@
         <state line="57" column="39" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1335">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1043,10 +1087,16 @@
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1077,10 +1127,16 @@
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1111,10 +1167,16 @@
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1145,10 +1207,16 @@
         <state line="52" column="49" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1125">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1189,13 +1257,6 @@
     <entry file="file://$PROJECT_DIR$/src/org/cloud/encryption/MD5.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="36" selection-start="911" selection-end="911" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="13" selection-start="5034" selection-end="5034" vertical-scroll-proportion="0.0" vertical-offset="1681" max-vertical-offset="2310">
           <folding />
         </state>
       </provider>
@@ -1266,15 +1327,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="13" selection-start="5034" selection-end="5034" vertical-scroll-proportion="0.0" vertical-offset="1681" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="32" selection-start="4683" selection-end="4683" vertical-scroll-proportion="0.40381557" vertical-offset="1576" max-vertical-offset="3360">
+        <state line="207" column="0" selection-start="7652" selection-end="7652" vertical-scroll-proportion="0.42766297" vertical-offset="2836" max-vertical-offset="3465">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#991#1010#0" expanded="true" />
-            <element signature="e#5119#5293#0" expanded="true" />
-            <element signature="e#5282#5283#0" expanded="true" />
+            <element signature="e#1027#1046#0" expanded="true" />
+            <element signature="e#4413#5086#0" expanded="true" />
+            <element signature="e#5075#5076#0" expanded="true" />
+            <element signature="e#5255#5263#0" expanded="true" />
+            <element signature="e#5958#5969#0" expanded="true" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#main#0;class#HomePage#0" expanded="false" />
+            <element signature="method#reset#0;class#HomePage#0" expanded="false" />
+            <element signature="method#start#0;class#HomePage#0" expanded="false" />
           </folding>
         </state>
       </provider>
