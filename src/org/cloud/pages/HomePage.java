@@ -18,23 +18,17 @@ import java.util.TimerTask;
 /**
  * Created by reza on 7/23/14.
  */
+
 public class HomePage extends ServerConn {
 
-    //public ArrayList<SectionType> functionsInfo=new ArrayList<SectionType>();
     public JFrame introFrame;
     public JLabel informationlable;
-
-    public JLabel protoType=new JLabel();
-    public JLabel description=new JLabel();
-    JLabel protoTypelable=new JLabel();
-    JLabel descriptionlable=new JLabel();
-
+    public JLabel descriptionlable=new JLabel("Description : ");
+    public JTextArea descriptionJtextArea=new JTextArea();
     public JComboBox calcTypeComboBox;
-
     public ArrayList functionsInfo = new ArrayList();
     public ArrayList<String> fieldTypesArrayList = new ArrayList<String>();
     public HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
-    //ArrayList<String> fieldTypeArrayList=new ArrayList<String>();
     public JPanel jRadioButtonsPanel=new JPanel();
 
     //Clock
@@ -54,13 +48,21 @@ public class HomePage extends ServerConn {
         informationlable = new JLabel();
         informationlable.setText("Welcome " + (String) personInfo.get(1) + " " + (String) personInfo.get(2) + " !");
         informationlable.setVisible(true);
+        descriptionlable.setVisible(false);
+
+        descriptionJtextArea.setSize(500,120);
+        descriptionJtextArea.setPreferredSize(new Dimension(480, 100));
+        descriptionJtextArea.setVisible(false);
+        descriptionJtextArea.setLineWrap(true);
+        descriptionJtextArea.setWrapStyleWord(false);
+
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
 
         introFrame = new JFrame("Cloud Calculator");
-        introFrame.setBounds((width / 2) - 300, 120, 500, 400);
+        introFrame.setBounds((width / 2) - 300, 120, 500, 500);
         introFrame.getContentPane().setLayout(new RiverLayout());
         introFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         introFrame.setVisible(true);
@@ -74,7 +76,9 @@ public class HomePage extends ServerConn {
         introFrame.getContentPane().add("", new JLabel("              "));
         introFrame.getContentPane().add(" ", calcTypeComboBox);
         introFrame.getContentPane().add("p p",jRadioButtonsPanel);
-        //introFrame.getContentPane().add("p",new JLabel(" AND :"));
+
+        introFrame.getContentPane().add("p",descriptionlable);
+        introFrame.getContentPane().add("p",descriptionJtextArea);
 
 
         try {
@@ -116,7 +120,7 @@ public class HomePage extends ServerConn {
         sectionTypeDTO.setFuncPrototype("Public Density(Double mass,Double Volume)");
         sectionTypeDTO.setArgNum(2);
         sectionTypeDTO.setFieldType("PHYSIC");
-        sectionTypeDTO.setDescription("mass/volume");
+        sectionTypeDTO.setDescription("Mass/Volume");
         functionsInfo.add(sectionTypeDTO);
 
         //fill Field comboBox up
@@ -136,14 +140,14 @@ public class HomePage extends ServerConn {
             public void itemStateChanged(ItemEvent e) {
                 jRadioButtonsPanel.removeAll();
                 final String item = (String)e.getItem();
+                descriptionJtextArea.setVisible(false);
+                descriptionlable.setVisible(false);
                 if (!(calcTypeComboBox.getSelectedIndex() == 0))
                 {
                     try {
                         ArrayList<String> funcNames=new ArrayList<String>();
                         funcNames=getFuncName(funcGroupedByFieldsArrayList.get(item));
-
                         //funcGroupedByFieldsArrayList.get(item);
-
                         int index=0;
                         ButtonGroup bg = new ButtonGroup();
                         while (index<funcNames.size())
@@ -154,12 +158,13 @@ public class HomePage extends ServerConn {
                                 @Override
                                 public void actionPerformed(ActionEvent e) {
 
+                                    descriptionJtextArea.setText("");
+                                    descriptionJtextArea.setEditable(false);
+                                    descriptionJtextArea.setVisible(true);
+                                    descriptionlable.setVisible(true);
                                     FieldTypeDTO ftd=new FieldTypeDTO();
                                     ftd=findFieldType(item,rd.getText());
-
-
-
-
+                                    descriptionJtextArea.setText(ftd.getFuncPrototype()+"\n"+ftd.getDescription());
                                 }
                             });
                             jRadioButtonsPanel.add(rd);
@@ -175,8 +180,8 @@ public class HomePage extends ServerConn {
         });
 
     }
-    public FieldTypeDTO findFieldType(String itemSelected,String funName)
-    {
+
+    public FieldTypeDTO findFieldType(String itemSelected,String funName) {
         int index=0;
         ArrayList arrayList=new ArrayList();
         FieldTypeDTO fieldTypeDTO=new FieldTypeDTO();
@@ -191,6 +196,7 @@ public class HomePage extends ServerConn {
         }
         return fieldTypeDTO;
     }
+
     public ArrayList<String> getFuncName(ArrayList arr) {
         ArrayList<String> tmp=new ArrayList<String>();
         int index=0;
@@ -201,25 +207,6 @@ public class HomePage extends ServerConn {
         }
         return tmp;
     }
-
-    /*public void createRadioButtons(ArrayList<String> buttonsName) {
-
-        int index=0;
-        ButtonGroup bg = new ButtonGroup();
-        while (index<buttonsName.size())
-        {
-            final JRadioButton rd=new JRadioButton(buttonsName.get(index));
-            rd.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    System.out.println(rd.getText());
-                }
-            });
-            jRadioButtonsPanel.add(rd);
-            bg.add(rd);
-            index++;
-        }
-    }*/
 
     public void defineFuncForEachField() {
 
