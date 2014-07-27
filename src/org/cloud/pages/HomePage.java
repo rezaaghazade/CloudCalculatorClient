@@ -26,6 +26,8 @@ public class HomePage extends ServerConn {
     public JLabel descriptionlable=new JLabel("Description : ");
     public JTextArea descriptionJtextArea=new JTextArea();
     public JComboBox calcTypeComboBox;
+    public JPanel jTextFieldPanel=new JPanel();
+    public JTextField jTextField[];
     public ArrayList functionsInfo = new ArrayList();
     public ArrayList<String> fieldTypesArrayList = new ArrayList<String>();
     public HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
@@ -79,6 +81,7 @@ public class HomePage extends ServerConn {
 
         introFrame.getContentPane().add("p",descriptionlable);
         introFrame.getContentPane().add("p",descriptionJtextArea);
+        introFrame.getContentPane().add("p p",jTextFieldPanel);
 
 
         try {
@@ -123,6 +126,7 @@ public class HomePage extends ServerConn {
         sectionTypeDTO.setDescription("Mass/Volume");
         functionsInfo.add(sectionTypeDTO);
 
+
         //fill Field comboBox up
         defineSectionType();
         defineFuncForEachField();
@@ -134,25 +138,29 @@ public class HomePage extends ServerConn {
             i++;
         }
 
-
         calcTypeComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
+                System.gc();
+                /*System.out.println("Meg used="+(Runtime.getRuntime().totalMemory()-
+                Runtime.getRuntime().freeMemory())/(1000*1000)+"M");*/
                 jRadioButtonsPanel.removeAll();
                 final String item = (String)e.getItem();
                 descriptionJtextArea.setVisible(false);
                 descriptionlable.setVisible(false);
+                jTextField=null;
+
                 if (!(calcTypeComboBox.getSelectedIndex() == 0))
                 {
                     try {
+                        introFrame.getContentPane().remove(jTextFieldPanel);
+                        jTextFieldPanel.removeAll();
                         ArrayList<String> funcNames=new ArrayList<String>();
                         funcNames=getFuncName(funcGroupedByFieldsArrayList.get(item));
-                        //funcGroupedByFieldsArrayList.get(item);
                         int index=0;
                         ButtonGroup bg = new ButtonGroup();
                         while (index<funcNames.size())
                         {
-
                             final JRadioButton rd=new JRadioButton(funcNames.get(index));
                             rd.addActionListener(new ActionListener() {
                                 @Override
@@ -165,6 +173,8 @@ public class HomePage extends ServerConn {
                                     FieldTypeDTO ftd=new FieldTypeDTO();
                                     ftd=findFieldType(item,rd.getText());
                                     descriptionJtextArea.setText(ftd.getFuncPrototype()+"\n"+ftd.getDescription());
+                                    createArgTextField(ftd.getArgNum());
+                                    introFrame.getContentPane().add("p p",jTextFieldPanel);
                                 }
                             });
                             jRadioButtonsPanel.add(rd);
@@ -176,11 +186,29 @@ public class HomePage extends ServerConn {
                         System.out.println("hi there : "+elx.getMessage());
                     }
                 }
+                jTextFieldPanel.removeAll();
             }
         });
 
     }
 
+    public void createArgTextField(Integer argNum)
+    {
+        //jTextField=null;
+        jTextFieldPanel.removeAll();
+        int index=0;
+        jTextField=new JTextField[argNum];
+        while (index<argNum)
+        {
+            jTextField[index]=new JTextField();
+            jTextField[index].setColumns(10);
+            jTextField[index].setText("arg "+index+1);
+            jTextFieldPanel.add(jTextField[index]);
+            index++;
+        }
+
+
+    }
     public FieldTypeDTO findFieldType(String itemSelected,String funName) {
         int index=0;
         ArrayList arrayList=new ArrayList();
