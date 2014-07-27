@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/HomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/HomePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -75,14 +74,13 @@
       <file leaf-file-name="HomePage.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="25" selection-start="5128" selection-end="5128" vertical-scroll-proportion="-0.92845786" vertical-offset="2504" max-vertical-offset="3240">
+            <state line="20" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="0.112877585" vertical-offset="4" max-vertical-offset="735">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#937#945#0" expanded="true" />
-                <element signature="e#1027#1046#0" expanded="true" />
-                <element signature="e#5633#5641#0" expanded="true" />
-                <element signature="e#6130#6325#0" expanded="true" />
-                <element signature="e#6310#6311#0" expanded="true" />
+                <element signature="docComment;class#HomePage#0" expanded="false" />
+                <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+                <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+                <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+                <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
                 <element signature="method#show#0;class#HomePage#0" expanded="false" />
                 <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
                 <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -96,7 +94,7 @@
       <file leaf-file-name="LoginPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="13" selection-start="5034" selection-end="5034" vertical-scroll-proportion="0.0" vertical-offset="1935" max-vertical-offset="2310">
+            <state line="129" column="13" selection-start="5034" selection-end="5034" vertical-scroll-proportion="0.0" vertical-offset="1681" max-vertical-offset="2310">
               <folding />
             </state>
           </provider>
@@ -747,7 +745,7 @@
       <workItem from="1406257965809" duration="5736000" />
       <workItem from="1406374092090" duration="7265000" />
       <workItem from="1406381425254" duration="7045000" />
-      <workItem from="1406412520280" duration="1706000" />
+      <workItem from="1406412520280" duration="6826000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -805,11 +803,23 @@
       <created>1406386938895</created>
       <updated>1406386938895</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Initial commit&#10;">
+      <created>1406414238590</created>
+      <updated>1406414238590</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Initial commit&#10;">
+      <created>1406417170696</created>
+      <updated>1406417170696</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Initial commit&#10;">
+      <created>1406420746509</created>
+      <updated>1406420746509</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46546000" />
+    <option name="totallyTimeSpent" value="51666000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -833,7 +843,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="21" width="1366" height="747" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -854,7 +864,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18806647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18806647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40243903" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -890,12 +900,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="142" column="5" selection-start="5158" selection-end="5158" vertical-scroll-proportion="0.0" vertical-offset="2130" max-vertical-offset="3210">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -926,12 +935,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="145" column="48" selection-start="5614" selection-end="5614" vertical-scroll-proportion="0.0" vertical-offset="2175" max-vertical-offset="3345">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -955,12 +963,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="96" column="21" selection-start="3790" selection-end="3790" vertical-scroll-proportion="0.0" vertical-offset="1245" max-vertical-offset="2340">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -1029,12 +1036,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="49" selection-start="2704" selection-end="2704" vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="1425">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -1075,12 +1081,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="39" selection-start="1994" selection-end="1994" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1335">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -1128,12 +1133,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -1168,12 +1172,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -1208,12 +1211,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -1248,12 +1250,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="49" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1125">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
@@ -1359,9 +1360,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
+    <entry file="jar:///usr/local/jdk1.7.0_45/src.zip!/javax/swing/JTextArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="13" selection-start="5034" selection-end="5034" vertical-scroll-proportion="0.0" vertical-offset="1681" max-vertical-offset="2310">
+        <state line="138" column="11" selection-start="4817" selection-end="4817" vertical-scroll-proportion="0.33227345" vertical-offset="1336" max-vertical-offset="11640">
           <folding />
         </state>
       </provider>
@@ -1376,16 +1377,22 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="13" selection-start="5034" selection-end="5034" vertical-scroll-proportion="0.0" vertical-offset="1681" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="25" selection-start="5128" selection-end="5128" vertical-scroll-proportion="-0.92845786" vertical-offset="2504" max-vertical-offset="3240">
+        <state line="20" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="0.112877585" vertical-offset="4" max-vertical-offset="735">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#937#945#0" expanded="true" />
-            <element signature="e#1027#1046#0" expanded="true" />
-            <element signature="e#5633#5641#0" expanded="true" />
-            <element signature="e#6130#6325#0" expanded="true" />
-            <element signature="e#6310#6311#0" expanded="true" />
+            <element signature="docComment;class#HomePage#0" expanded="false" />
+            <element signature="method#HomePage#0;class#HomePage#0" expanded="false" />
+            <element signature="method#findFieldType#0;class#HomePage#0" expanded="false" />
+            <element signature="method#getFuncName#0;class#HomePage#0" expanded="false" />
+            <element signature="method#defineFuncForEachField#0;class#HomePage#0" expanded="false" />
             <element signature="method#show#0;class#HomePage#0" expanded="false" />
             <element signature="method#defineSectionType#0;class#HomePage#0" expanded="false" />
             <element signature="method#main#0;class#HomePage#0" expanded="false" />
