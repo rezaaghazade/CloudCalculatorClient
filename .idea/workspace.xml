@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/cloud/pages/AddUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/HomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -787,7 +782,7 @@
       <workItem from="1406412520280" duration="10885000" />
       <workItem from="1406456843361" duration="10617000" />
       <workItem from="1407159306637" duration="110000" />
-      <workItem from="1407159444667" duration="8409000" />
+      <workItem from="1407159444667" duration="8607000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -865,11 +860,15 @@
       <created>1406424233632</created>
       <updated>1406424233632</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Initial commit&#10;">
+      <created>1407167871903</created>
+      <updated>1407167871903</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74861000" />
+    <option name="totallyTimeSpent" value="75059000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
