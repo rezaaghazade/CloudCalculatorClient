@@ -5,6 +5,7 @@ import org.cloud.encryption.MD5;
 import se.datadosen.component.RiverLayout;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -31,11 +32,24 @@ public class LoginPage extends ServerConn {
 
     public LoginPage() throws Exception {
 
-        introFrame = new JFrame("ATM");
-        introFrame.setBounds(450, 150, 180, 70);
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = (int) screenSize.getWidth();
+        int height = (int) screenSize.getHeight();
+
+        introFrame = new JFrame("Cloud Calculator");
+        introFrame.setBounds(width/2-250, 110, 500, 500);
         introFrame.getContentPane().setLayout(new RiverLayout());
         introFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         introFrame.setVisible(true);
+
+        JLabel pic = new JLabel();
+        //add(pic);
+        ImageIcon test = new ImageIcon("cloud-calculator.jpg");
+        pic.setIcon(test);
+        //pic
+
+        introFrame.getContentPane().add("",pic);
+
     }
 
     public void ShowLoginPagePage() {
@@ -48,7 +62,8 @@ public class LoginPage extends ServerConn {
         }
 
         userNameTextField = new JTextField(16);
-        userNameTextField.setToolTipText("Card Number is 16 digits");
+        userNameTextField.setFocusable(true);
+        userNameTextField.setToolTipText("User Name is 8 digits");
         passwordTextField = new JPasswordField(16);
         passwordTextField.setToolTipText("Password is 10 digits");
         cardNumClearButton = new JButton("Clear");
@@ -59,10 +74,10 @@ public class LoginPage extends ServerConn {
         enterButton.setToolTipText("Enter Account Page");
         informationLable = new JLabel();
 
-        introFrame.getContentPane().add("p", new JLabel("Card Number :"));
+        introFrame.getContentPane().add("p", new JLabel("User Name :"));
         introFrame.getContentPane().add("center", userNameTextField);
         introFrame.getContentPane().add("       ", cardNumClearButton);
-        introFrame.getContentPane().add("p", new JLabel("Password :     "));
+        introFrame.getContentPane().add("p", new JLabel("Password   :"));
         introFrame.getContentPane().add("center ", passwordTextField);
         introFrame.getContentPane().add("       ", passwordClearButton);
         introFrame.getContentPane().add("p center", enterButton);
@@ -113,11 +128,19 @@ public class LoginPage extends ServerConn {
                             informationLable.setText("CardNumber Or Password is InCorrect");
                         } else {
                             introFrame.dispose();
-                            HomePage homePage = new HomePage();
+                            if ((Integer)personalArray.get(0)==0)
+                            {
+                                AdminUserHomePage homePage=new AdminUserHomePage();
+
+                            }else {
+                                UsualUserHomePage homePage = new UsualUserHomePage();
+                            }
+
+
                         }
 
                     } catch (Exception ex) {
-                        String message = "Connection is Closed890";
+                        String message = "Connection is Closed";
                         JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
                     }
                 }

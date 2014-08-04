@@ -5,10 +5,7 @@ import org.cloud.dto.FieldTypeDTO;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -19,7 +16,7 @@ import java.util.TimerTask;
  * Created by reza on 7/23/14.
  */
 
-public class HomePage extends ServerConn {
+public class UsualUserHomePage extends ServerConn {
 
     public JFrame introFrame;
     public JLabel informationlable;
@@ -28,18 +25,23 @@ public class HomePage extends ServerConn {
     public JComboBox calcTypeComboBox;
     public JPanel jTextFieldPanel=new JPanel();
     public JTextField jTextField[];
+    public JButton calcBtn=new JButton("Calculate !");
+    public FieldTypeDTO currentFieldTypeObj=new FieldTypeDTO();
     public ArrayList functionsInfo = new ArrayList();
     public ArrayList<String> fieldTypesArrayList = new ArrayList<String>();
     public HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
     public JPanel jRadioButtonsPanel=new JPanel();
 
+    private static final String IMG_PATH = "./cloud-calculator.jpg";
+
+    int index=0;
     //Clock
     private final JLabel time = new JLabel();
     private final SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
     private int currentSecond;
     private Calendar calendar;
 
-    public HomePage() {
+    public UsualUserHomePage() {
 
         calcTypeComboBox = new JComboBox();
 
@@ -47,9 +49,9 @@ public class HomePage extends ServerConn {
         personInfo.add("1");
         personInfo.add("reza");
         personInfo.add("aghazade");
-        informationlable = new JLabel();
-        informationlable.setText("Welcome " + (String) personInfo.get(1) + " " + (String) personInfo.get(2) + " !");
-        informationlable.setVisible(true);
+        //informationlable = new JLabel();
+        //informationlable.setText();
+        //informationlable.setVisible(true);
         descriptionlable.setVisible(false);
 
         descriptionJtextArea.setSize(500,120);
@@ -64,14 +66,25 @@ public class HomePage extends ServerConn {
         int height = (int) screenSize.getHeight();
 
         introFrame = new JFrame("Cloud Calculator");
-        introFrame.setBounds((width / 2) - 300, 120, 500, 500);
+        introFrame.setBounds(width/2-250, 110, 500, 600);
         introFrame.getContentPane().setLayout(new RiverLayout());
         introFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         introFrame.setVisible(true);
         introFrame.setResizable(false);
 
+        JLabel pic = new JLabel();
+        //add(pic);
+        ImageIcon test = new ImageIcon("small.png");
+        pic.setIcon(test);
+        pic.setBounds(118,0,263,149);
+        //pic
+
+    introFrame.getContentPane().add("center",pic);
+
+
+        //Clock start
         start();
-        introFrame.getContentPane().add("p", informationlable);
+        introFrame.getContentPane().add("p", new JLabel("Welcome " + (String) personInfo.get(1) + " " + (String) personInfo.get(2) + " !"));
         introFrame.getContentPane().add("", new JLabel("                                                   "));
         introFrame.getContentPane().add("   ", time);
         introFrame.getContentPane().add("p", new JLabel("Calculation Type    :     "));
@@ -82,7 +95,6 @@ public class HomePage extends ServerConn {
         introFrame.getContentPane().add("p",descriptionlable);
         introFrame.getContentPane().add("p",descriptionJtextArea);
         introFrame.getContentPane().add("p p",jTextFieldPanel);
-
 
         try {
             /*getServerApplication().newInstance("org.cloud.database.GetFunctions");
@@ -98,7 +110,7 @@ public class HomePage extends ServerConn {
         sectionTypeDTO.setFuncName("Sum");
         sectionTypeDTO.setFuncPrototype("Public Sum(Integer a,Integer b)");
         sectionTypeDTO.setArgNum(2);
-        sectionTypeDTO.setFieldType("MATH");
+        sectionTypeDTO.setFieldType("MATHEMATIC");
         sectionTypeDTO.setDescription("a+b");
         functionsInfo.add(sectionTypeDTO);
 
@@ -114,7 +126,7 @@ public class HomePage extends ServerConn {
         sectionTypeDTO.setFuncName("Minus");
         sectionTypeDTO.setFuncPrototype("Public Minus(Integer a,Integer b)");
         sectionTypeDTO.setArgNum(2);
-        sectionTypeDTO.setFieldType("MATH");
+        sectionTypeDTO.setFieldType("MATHEMATIC");
         sectionTypeDTO.setDescription("a-b");
         functionsInfo.add(sectionTypeDTO);
 
@@ -127,10 +139,10 @@ public class HomePage extends ServerConn {
         functionsInfo.add(sectionTypeDTO);
 
 
-        //fill Field comboBox up
         defineSectionType();
         defineFuncForEachField();
 
+        //fill Field comboBox up
         calcTypeComboBox.addItem("                                                    ");
         int i = 0;
         while (i < fieldTypesArrayList.size()) {
@@ -142,19 +154,20 @@ public class HomePage extends ServerConn {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 System.gc();
-                /*System.out.println("Meg used="+(Runtime.getRuntime().totalMemory()-
+                /*System.out.println("Meg used="+(Runtime.getRuntime().totalMemory();
                 Runtime.getRuntime().freeMemory())/(1000*1000)+"M");*/
+
                 jRadioButtonsPanel.removeAll();
+                jTextFieldPanel.removeAll();
                 final String item = (String)e.getItem();
                 descriptionJtextArea.setVisible(false);
                 descriptionlable.setVisible(false);
-                jTextField=null;
 
                 if (!(calcTypeComboBox.getSelectedIndex() == 0))
                 {
+                    calcBtn.setVisible(false);
                     try {
-                        introFrame.getContentPane().remove(jTextFieldPanel);
-                        jTextFieldPanel.removeAll();
+                        //introFrame.getContentPane().remove(jTextFieldPanel);
                         ArrayList<String> funcNames=new ArrayList<String>();
                         funcNames=getFuncName(funcGroupedByFieldsArrayList.get(item));
                         int index=0;
@@ -172,9 +185,12 @@ public class HomePage extends ServerConn {
                                     descriptionlable.setVisible(true);
                                     FieldTypeDTO ftd=new FieldTypeDTO();
                                     ftd=findFieldType(item,rd.getText());
+                                    currentFieldTypeObj=ftd;
                                     descriptionJtextArea.setText(ftd.getFuncPrototype()+"\n"+ftd.getDescription());
                                     createArgTextField(ftd.getArgNum());
                                     introFrame.getContentPane().add("p p",jTextFieldPanel);
+                                    calcBtn.setVisible(true);
+                                    introFrame.getContentPane().add("p p",calcBtn);
                                 }
                             });
                             jRadioButtonsPanel.add(rd);
@@ -186,29 +202,97 @@ public class HomePage extends ServerConn {
                         System.out.println("hi there : "+elx.getMessage());
                     }
                 }
+                calcBtn.setVisible(false);
                 jTextFieldPanel.removeAll();
             }
         });
 
+        calcBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+
+                    getServerApplication().newInstance("org.cloud.sections."+currentFieldTypeObj.getFieldType());
+                    Double value=new Double(0);
+
+                    if (currentFieldTypeObj.getArgNum()==1)
+                    {
+                            value= (Double) getServerApplication().invokeMethod(
+                                currentFieldTypeObj.getFuncName(),new Object[]{new Double(jTextField[0].getText())});
+                    }
+                    if (currentFieldTypeObj.getArgNum()==2)
+                    {
+                            value= (Double) getServerApplication().invokeMethod(
+                                currentFieldTypeObj.getFuncName(),new Object[]{new Double(jTextField[0].getText()),new Double(jTextField[1].getText())});
+                    }
+
+                    //System.out.println("VALUE IS : "+value);
+                    String message="Result is : "+value.toString().toUpperCase();
+                    JOptionPane.showMessageDialog(new JFrame(),message, "Info", JOptionPane.INFORMATION_MESSAGE);
+                }catch (Exception elx)
+                {
+                    String message = elx.getMessage();
+
+                    JOptionPane.showMessageDialog(new JFrame(),message.toUpperCase(), "Info", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
     }
 
-    public void createArgTextField(Integer argNum)
-    {
+    public void createArgTextField(Integer argNum) {
+
         //jTextField=null;
         jTextFieldPanel.removeAll();
-        int index=0;
+        int columnCounter=1;
         jTextField=new JTextField[argNum];
+        index=0;
         while (index<argNum)
         {
+            columnCounter+=index;
             jTextField[index]=new JTextField();
             jTextField[index].setColumns(10);
-            jTextField[index].setText("arg "+index+1);
+            jTextField[index].setText("Arg " + columnCounter);
+
+            final int finalI = index;
+            jTextField[index].addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    jTextField[finalI].setText("");
+                }
+            });
+
+           /* jTextField[index].getDocument().addDocumentListener(new DocumentListener() {
+                @Override
+                public void insertUpdate(DocumentEvent e) {
+                    System.out.println("insertUpdate");
+                    jtextFieldInputChecker(e.getLength());
+                }
+
+                @Override
+                public void removeUpdate(DocumentEvent e) {
+                    System.out.println("removeUpdate");
+                    jtextFieldInputChecker(e.getLength());
+                }
+
+                @Override
+                public void changedUpdate(DocumentEvent e) {
+                    System.out.println("changedUpdate");
+                    jtextFieldInputChecker(e.getLength());
+                }
+            });*/
+
             jTextFieldPanel.add(jTextField[index]);
+
             index++;
         }
-
-
     }
+
+    public void jtextFieldInputChecker(int lenght) {
+        if (lenght==0)
+            System.out.println("disable");
+            calcBtn.setEnabled(false);
+    }
+
     public FieldTypeDTO findFieldType(String itemSelected,String funName) {
         int index=0;
         ArrayList arrayList=new ArrayList();
@@ -293,7 +377,7 @@ public class HomePage extends ServerConn {
     }
 
     public static void main(String[] args) {
-        HomePage homePage = new HomePage();
+        UsualUserHomePage homePage = new UsualUserHomePage();
     }
 
     private void reset() {
