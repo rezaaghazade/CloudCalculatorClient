@@ -41,17 +41,10 @@ public class UsualUserHomePage extends ServerConn {
     private int currentSecond;
     private Calendar calendar;
 
-    public UsualUserHomePage() {
+    public UsualUserHomePage(ArrayList personInfo) {
 
         calcTypeComboBox = new JComboBox();
 
-        ArrayList personInfo = new ArrayList();
-        personInfo.add("1");
-        personInfo.add("reza");
-        personInfo.add("aghazade");
-        //informationlable = new JLabel();
-        //informationlable.setText();
-        //informationlable.setVisible(true);
         descriptionlable.setVisible(false);
 
         descriptionJtextArea.setSize(500,120);
@@ -167,7 +160,6 @@ public class UsualUserHomePage extends ServerConn {
                 {
                     calcBtn.setVisible(false);
                     try {
-                        //introFrame.getContentPane().remove(jTextFieldPanel);
                         ArrayList<String> funcNames=new ArrayList<String>();
                         funcNames=getFuncName(funcGroupedByFieldsArrayList.get(item));
                         int index=0;
@@ -225,8 +217,6 @@ public class UsualUserHomePage extends ServerConn {
                             value= (Double) getServerApplication().invokeMethod(
                                 currentFieldTypeObj.getFuncName(),new Object[]{new Double(jTextField[0].getText()),new Double(jTextField[1].getText())});
                     }
-
-                    //System.out.println("VALUE IS : "+value);
                     String message="Result is : "+value.toString().toUpperCase();
                     JOptionPane.showMessageDialog(new JFrame(),message, "Info", JOptionPane.INFORMATION_MESSAGE);
                 }catch (Exception elx)
@@ -240,8 +230,6 @@ public class UsualUserHomePage extends ServerConn {
     }
 
     public void createArgTextField(Integer argNum) {
-
-        //jTextField=null;
         jTextFieldPanel.removeAll();
         int columnCounter=1;
         jTextField=new JTextField[argNum];
@@ -260,29 +248,7 @@ public class UsualUserHomePage extends ServerConn {
                     jTextField[finalI].setText("");
                 }
             });
-
-           /* jTextField[index].getDocument().addDocumentListener(new DocumentListener() {
-                @Override
-                public void insertUpdate(DocumentEvent e) {
-                    System.out.println("insertUpdate");
-                    jtextFieldInputChecker(e.getLength());
-                }
-
-                @Override
-                public void removeUpdate(DocumentEvent e) {
-                    System.out.println("removeUpdate");
-                    jtextFieldInputChecker(e.getLength());
-                }
-
-                @Override
-                public void changedUpdate(DocumentEvent e) {
-                    System.out.println("changedUpdate");
-                    jtextFieldInputChecker(e.getLength());
-                }
-            });*/
-
             jTextFieldPanel.add(jTextField[index]);
-
             index++;
         }
     }
@@ -335,7 +301,6 @@ public class UsualUserHomePage extends ServerConn {
                 {
                     if (((FieldTypeDTO) functionsInfo.get(j)).getFieldType()==fieldName)
                     {
-                        System.out.println("equal : "+i+j);
                         tempArrayList.add(functionsInfo.get(j));
                     }
                     j++;
@@ -352,9 +317,7 @@ public class UsualUserHomePage extends ServerConn {
         ArrayList arr=new ArrayList();
         while (index<funcGroupedByFieldsArrayList.size())
         {
-            System.out.println(index);
             arr=funcGroupedByFieldsArrayList.get(fieldTypesArrayList.get(index));
-            System.out.println(arr.size());
             index++;
         }
     }
@@ -377,7 +340,7 @@ public class UsualUserHomePage extends ServerConn {
     }
 
     public static void main(String[] args) {
-        UsualUserHomePage homePage = new UsualUserHomePage();
+        //UsualUserHomePage homePage = new UsualUserHomePage();
     }
 
     private void reset() {

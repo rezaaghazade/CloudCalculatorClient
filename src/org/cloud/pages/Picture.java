@@ -21,20 +21,7 @@ public class Picture extends Canvas{
         Toolkit t=Toolkit.getDefaultToolkit();
         Image i=t.getImage("cloud-calculator.jpg");
         g.drawImage(i,0,150,this);
-
-
-
     }
-    /*public static void main(String[] args) {
-        Picture m=new Picture();
-        JFrame f=new JFrame();
-        f.add(m);
-
-        //introFrame.setBounds((width / 2) - 300, 120, 500, 500);
-        f.setSize(500,500);
-        f.setVisible(true);
-    }*/
-
 
     public JPanel getjPanel() {
         return jPanel;

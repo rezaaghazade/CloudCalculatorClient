@@ -1,16 +1,13 @@
 package org.cloud.pages;
 
 import org.cloud.connectToServer.ServerConn;
-import org.cloud.dto.FieldTypeDTO;
 import se.datadosen.component.RiverLayout;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.TimerTask;
 
 /**
@@ -21,15 +18,14 @@ public class AdminUserHomePage extends ServerConn{
     public AddUser addUser;
     public AddFunc addFunc;
 
-    public JFrame introFrame;
+    public JFrame adminPageFrame;
     public JFrame addFuncFrame;
 
     public JButton addUserButton;
     public JButton addFuncButton;
     public JButton calculatorButton;
 
-
-
+    public final ArrayList personInfo2;
     public JLabel informationlable;
 
     public ArrayList functionsInfo = new ArrayList();
@@ -42,30 +38,22 @@ public class AdminUserHomePage extends ServerConn{
     private int currentSecond;
     private Calendar calendar;
 
-    public AdminUserHomePage() {
+    public AdminUserHomePage(ArrayList personInfo) {
 
-
-        ArrayList personInfo = new ArrayList();
-        personInfo.add("1");
-        personInfo.add("reza");
-        personInfo.add("aghazade");
-        //informationlable = new JLabel();
-        //informationlable.setText();
-        //informationlable.setVisible(true);
-
+        personInfo2=new ArrayList(personInfo);
+        //personInfo2=personInfo;
+        
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
 
         //Intro Frame
-        introFrame = new JFrame("Cloud Calculator");
-        introFrame.setBounds(width/2-250, 110, 500, 600);
-        introFrame.getContentPane().setLayout(new RiverLayout());
-        introFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        introFrame.setVisible(true);
-        introFrame.setResizable(false);
-
-
+        adminPageFrame = new JFrame("Cloud Calculator");
+        adminPageFrame.setBounds(width/2-250, 110, 500, 600);
+        adminPageFrame.getContentPane().setLayout(new RiverLayout());
+        adminPageFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        adminPageFrame.setVisible(true);
+        adminPageFrame.setResizable(false);
 
 
         //addFuncFrame
@@ -79,70 +67,40 @@ public class AdminUserHomePage extends ServerConn{
         pic.setIcon(test);
         pic.setBounds(118,0,263,149);
         //pic
-        introFrame.getContentPane().add("center",pic);
+        adminPageFrame.getContentPane().add("center",pic);
 
 
         //Clock start
         start();
 
-        introFrame.getContentPane().add("p", new JLabel("Welcome " + (String) personInfo.get(1) + " " + (String) personInfo.get(2) + " !"));
-        introFrame.getContentPane().add("", new JLabel("                                                   "));
-        introFrame.getContentPane().add("   ", time);
+        adminPageFrame.getContentPane().add("p", new JLabel("Welcome " + (String) personInfo.get(1) + " " + (String) personInfo.get(2) + " !"));
+        adminPageFrame.getContentPane().add("", new JLabel("                                                   "));
+        adminPageFrame.getContentPane().add("   ", time);
 
         addUserButton=new JButton("Add User");
         addFuncButton=new JButton("Add Function");
         calculatorButton=new JButton("Calculator");
 
-        introFrame.getContentPane().add("p", new JLabel(""));
-        introFrame.getContentPane().add("p",addUserButton);
-        introFrame.getContentPane().add("p",addFuncButton);
-        introFrame.getContentPane().add("p",calculatorButton);
+
+        adminPageFrame.getContentPane().add("p", new JLabel(""));
+        adminPageFrame.getContentPane().add("p",addUserButton);
+        adminPageFrame.getContentPane().add("p",addFuncButton);
+        adminPageFrame.getContentPane().add("p",calculatorButton);
 
 
         addUserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 try {
                     if (addUser.addUserFrame.isShowing())
                     {
                         String message = "Page is Open";
                         JOptionPane.showMessageDialog(new JFrame(), message, "Information", JOptionPane.INFORMATION_MESSAGE);
                     }
-
                 }catch (Exception elx)
                 {
                     addUser=new AddUser();
                 }
-                /*if (!addUserFrame.isShowing())
-                {
-                    addUserFrame.getContentPane().setLayout(new RiverLayout());
-                    addUserFrame.setDefaultCloseOperation(addUserFrame.DISPOSE_ON_CLOSE);
-                    addUserFrame.setVisible(true);
-                    addUserFrame.setResizable(false);
-
-                    JTextField userName=new JTextField(20);
-                    JPasswordField passWord=new JPasswordField(20);
-
-                    JComboBox typeComboBox=new JComboBox();
-                    typeComboBox.addItem("ADMIN");
-                    typeComboBox.addItem("REGULAR");
-
-                    JTextField name=new JTextField(20);
-                    JTextField family=new JTextField(20);
-
-                    addUserFrame.getContentPane().add("p center",new JLabel("UserName :"));
-                    addUserFrame.getContentPane().add("",userName);
-                    addUserFrame.getContentPane().add("p center",new JLabel("Password : "));
-                    addUserFrame.getContentPane().add("",passWord);
-                    addUserFrame.getContentPane().add("p center",new JLabel("Type : "));
-                    addUserFrame.getContentPane().add("",typeComboBox);
-                    addUserFrame.getContentPane().add("p center",new JLabel("Name :  "));
-                    addUserFrame.getContentPane().add("",name);
-                    addUserFrame.getContentPane().add("p center",new JLabel("Family : "));
-                    addUserFrame.getContentPane().add("",family);
-
-                }*/
             }
         });
 
@@ -163,7 +121,7 @@ public class AdminUserHomePage extends ServerConn{
         calculatorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                UsualUserHomePage home=new UsualUserHomePage(personInfo2);
             }
         });
 
@@ -180,7 +138,7 @@ public class AdminUserHomePage extends ServerConn{
     }
 
     public static void main(String[] args) {
-        AdminUserHomePage homePage = new AdminUserHomePage();
+        //AdminUserHomePage homePage = new AdminUserHomePage();
     }
 
     private void reset() {

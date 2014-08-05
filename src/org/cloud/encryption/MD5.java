@@ -25,8 +25,8 @@ public class MD5 {
         }
         return md5;
     }
-   /* public static void main(String[] args) {
+    public static void main(String[] args) {
         MD5 obj=new MD5();
-        System.out.println(obj.md5(""));
-    }*/
+        System.out.println(obj.md5("1991"));
+    }
 }

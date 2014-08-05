@@ -27,7 +27,7 @@ public class AddUser extends ServerConn{
     private Matcher matcher;
 
     private static final String USERNAME_PATTERN = "^[a-z0-9_-]{3,15}$";
-    private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{6,18}$";
+    private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{4,18}$";
 
     public AddUser()
     {
@@ -113,7 +113,6 @@ public class AddUser extends ServerConn{
 
             getServerApplication().newInstance("org.cloud.database.AddUser");
             MD5 md5=new MD5();
-            System.out.println("in Add User.Client");
             Boolean flag= (Boolean) getServerApplication().invokeMethod("PushUser",new Object[]{
                     new String(userName.getText()),
                     new String(md5.md5(passWord.getText())),

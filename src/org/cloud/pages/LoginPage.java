@@ -9,6 +9,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,7 +21,7 @@ import java.util.ArrayList;
  */
 public class LoginPage extends ServerConn {
 
-    public JFrame introFrame;
+    public JFrame loginFrame;
     public JTextField userNameTextField;
     public JPasswordField passwordTextField;
     public JButton cardNumClearButton;
@@ -30,17 +32,24 @@ public class LoginPage extends ServerConn {
     public JLabel informationLable;
     public ArrayList personalArray;
 
+
+    private Pattern pattern;
+    private Matcher matcher;
+
+    private static final String USERNAME_PATTERN = "^[a-z0-9_-]{3,15}$";
+    private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{4,18}$";
+
     public LoginPage() throws Exception {
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
 
-        introFrame = new JFrame("Cloud Calculator");
-        introFrame.setBounds(width/2-250, 110, 500, 500);
-        introFrame.getContentPane().setLayout(new RiverLayout());
-        introFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        introFrame.setVisible(true);
+        loginFrame = new JFrame("Cloud Calculator");
+        loginFrame.setBounds(width/2-250, 110, 500, 500);
+        loginFrame.getContentPane().setLayout(new RiverLayout());
+        loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        loginFrame.setVisible(true);
 
         JLabel pic = new JLabel();
         //add(pic);
@@ -48,7 +57,7 @@ public class LoginPage extends ServerConn {
         pic.setIcon(test);
         //pic
 
-        introFrame.getContentPane().add("",pic);
+        loginFrame.getContentPane().add("",pic);
 
     }
 
@@ -74,17 +83,17 @@ public class LoginPage extends ServerConn {
         enterButton.setToolTipText("Enter Account Page");
         informationLable = new JLabel();
 
-        introFrame.getContentPane().add("p", new JLabel("User Name :"));
-        introFrame.getContentPane().add("center", userNameTextField);
-        introFrame.getContentPane().add("       ", cardNumClearButton);
-        introFrame.getContentPane().add("p", new JLabel("Password   :"));
-        introFrame.getContentPane().add("center ", passwordTextField);
-        introFrame.getContentPane().add("       ", passwordClearButton);
-        introFrame.getContentPane().add("p center", enterButton);
-        introFrame.getContentPane().add("br center", informationLable);
+        loginFrame.getContentPane().add("p", new JLabel("User Name :"));
+        loginFrame.getContentPane().add("center", userNameTextField);
+        loginFrame.getContentPane().add("       ", cardNumClearButton);
+        loginFrame.getContentPane().add("p", new JLabel("Password   :"));
+        loginFrame.getContentPane().add("center ", passwordTextField);
+        loginFrame.getContentPane().add("       ", passwordClearButton);
+        loginFrame.getContentPane().add("p center", enterButton);
+        loginFrame.getContentPane().add("br center", informationLable);
         JLabel tempLable = new JLabel();
-        introFrame.getContentPane().add("p center", tempLable);
-        introFrame.pack();
+        loginFrame.getContentPane().add("p center", tempLable);
+        loginFrame.pack();
 
         cardNumClearButton.addActionListener(new ActionListener() {
             @Override
@@ -117,7 +126,7 @@ public class LoginPage extends ServerConn {
                     JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
                 }
 
-                if (checkInput(userNameStr, passWdStr)) {
+                if (validateInput(userNameStr, passWdStr)) {
                     MD5 md5Obj = new MD5();
                     passWdStr = md5Obj.md5(passWdStr);
                     try {
@@ -127,13 +136,15 @@ public class LoginPage extends ServerConn {
                         if (personalArray.size() == 0) {
                             informationLable.setText("CardNumber Or Password is InCorrect");
                         } else {
-                            introFrame.dispose();
+                            loginFrame.dispose();
                             if ((Integer)personalArray.get(0)==0)
                             {
-                                AdminUserHomePage homePage=new AdminUserHomePage();
+                                System.out.println("Call Admin");
+                                AdminUserHomePage homePage=new AdminUserHomePage(personalArray);
 
                             }else {
-                                UsualUserHomePage homePage = new UsualUserHomePage();
+                                System.out.println("Call Usual");
+                                UsualUserHomePage homePage = new UsualUserHomePage(personalArray);
                             }
 
 
@@ -148,7 +159,7 @@ public class LoginPage extends ServerConn {
         });
     }
 
-    public boolean checkInput(String cardNum, String passWd) {
+    /*public boolean checkInput(String cardNum, String passWd) {
         try {
             Integer tempNum1 = new Integer(Integer.parseInt(cardNum));
             Integer tempNum2 = new Integer(Integer.parseInt(passWd));
@@ -157,7 +168,7 @@ public class LoginPage extends ServerConn {
             informationLable.setText("Type UserName Or Password In True Style");
             return false;
         }
-    }
+    }*/
 
     public static void main(String[] args) {
         try {
@@ -168,4 +179,31 @@ public class LoginPage extends ServerConn {
         }
 
     }
+
+    public boolean validateInput(String userNameStr,String passWdStr)
+    {
+        userNameValidator();
+        matcher = pattern.matcher(userNameStr);
+        System.out.println(matcher.matches());
+        if (!matcher.matches())
+            return false;
+
+        passWordValidator();
+        matcher = pattern.matcher(passWdStr);
+        System.out.println(matcher.matches());
+        if (!matcher.matches())
+            return false;
+
+        return true;
+    }
+    public void userNameValidator()
+    {
+        pattern = Pattern.compile(USERNAME_PATTERN);
+    }
+    public void passWordValidator()
+    {
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+    }
+
 }
+
