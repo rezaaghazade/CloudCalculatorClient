@@ -41,6 +41,8 @@ public class UsualUserHomePage extends ServerConn {
     private int currentSecond;
     private Calendar calendar;
 
+    public JButton exitButton;
+
     public UsualUserHomePage(ArrayList personInfo) {
 
         calcTypeComboBox = new JComboBox();
@@ -72,9 +74,10 @@ public class UsualUserHomePage extends ServerConn {
         pic.setBounds(118,0,263,149);
         //pic
 
-    introFrame.getContentPane().add("center",pic);
+        introFrame.getContentPane().add("center",pic);
 
 
+        exitButton=new JButton("Exit");
         //Clock start
         start();
         introFrame.getContentPane().add("p", new JLabel("Welcome " + (String) personInfo.get(1) + " " + (String) personInfo.get(2) + " !"));
@@ -143,6 +146,11 @@ public class UsualUserHomePage extends ServerConn {
             i++;
         }
 
+        introFrame.getContentPane().add("p p",jTextFieldPanel);
+        calcBtn.setVisible(false);
+        introFrame.getContentPane().add("p p",calcBtn);
+        introFrame.getContentPane().add("p",exitButton);
+
         calcTypeComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -180,9 +188,9 @@ public class UsualUserHomePage extends ServerConn {
                                     currentFieldTypeObj=ftd;
                                     descriptionJtextArea.setText(ftd.getFuncPrototype()+"\n"+ftd.getDescription());
                                     createArgTextField(ftd.getArgNum());
-                                    introFrame.getContentPane().add("p p",jTextFieldPanel);
+                                    //introFrame.getContentPane().add("p p",jTextFieldPanel);
                                     calcBtn.setVisible(true);
-                                    introFrame.getContentPane().add("p p",calcBtn);
+                                    //introFrame.getContentPane().add("p p",calcBtn);
                                 }
                             });
                             jRadioButtonsPanel.add(rd);
@@ -204,7 +212,7 @@ public class UsualUserHomePage extends ServerConn {
             public void actionPerformed(ActionEvent e) {
                 try {
 
-                    getServerApplication().newInstance("org.cloud.sections."+currentFieldTypeObj.getFieldType());
+                    getServerApplication().newInstance("org.cloud.fields."+currentFieldTypeObj.getFieldType());
                     Double value=new Double(0);
 
                     if (currentFieldTypeObj.getArgNum()==1)
@@ -225,6 +233,14 @@ public class UsualUserHomePage extends ServerConn {
 
                     JOptionPane.showMessageDialog(new JFrame(),message.toUpperCase(), "Info", JOptionPane.ERROR_MESSAGE);
                 }
+            }
+        });
+
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                introFrame.dispose();
+                LoginPage log=new LoginPage();
             }
         });
     }
@@ -255,7 +271,7 @@ public class UsualUserHomePage extends ServerConn {
 
     public void jtextFieldInputChecker(int lenght) {
         if (lenght==0)
-            System.out.println("disable");
+            //System.out.println("disable");
             calcBtn.setEnabled(false);
     }
 
@@ -268,7 +284,7 @@ public class UsualUserHomePage extends ServerConn {
             if (((FieldTypeDTO)funcGroupedByFieldsArrayList.get(itemSelected).get(index)).getFuncName()==funName)
             {
                 fieldTypeDTO=((FieldTypeDTO)funcGroupedByFieldsArrayList.get(itemSelected).get(index));
-                System.out.println(fieldTypeDTO.getFuncPrototype());
+                //System.out.println(fieldTypeDTO.getFuncPrototype());
             }
             index++;
         }

@@ -31,6 +31,7 @@ public class LoginPage extends ServerConn {
     public String passWdStr = "";
     public JLabel informationLable;
     public ArrayList personalArray;
+    public JButton exitButton;
 
 
     private Pattern pattern;
@@ -39,7 +40,9 @@ public class LoginPage extends ServerConn {
     private static final String USERNAME_PATTERN = "^[a-z0-9_-]{3,15}$";
     private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{4,18}$";
 
-    public LoginPage() throws Exception {
+    public LoginPage(){
+
+        System.gc();
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
@@ -62,10 +65,9 @@ public class LoginPage extends ServerConn {
     }
 
     public void ShowLoginPagePage() {
+
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-
-
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -82,6 +84,7 @@ public class LoginPage extends ServerConn {
         enterButton = new JButton("Enter");
         enterButton.setToolTipText("Enter Account Page");
         informationLable = new JLabel();
+        exitButton=new JButton("Exit");
 
         loginFrame.getContentPane().add("p", new JLabel("User Name :"));
         loginFrame.getContentPane().add("center", userNameTextField);
@@ -89,10 +92,11 @@ public class LoginPage extends ServerConn {
         loginFrame.getContentPane().add("p", new JLabel("Password   :"));
         loginFrame.getContentPane().add("center ", passwordTextField);
         loginFrame.getContentPane().add("       ", passwordClearButton);
-        loginFrame.getContentPane().add("p center", enterButton);
+        loginFrame.getContentPane().add("p center  ", enterButton);
         loginFrame.getContentPane().add("br center", informationLable);
         JLabel tempLable = new JLabel();
         loginFrame.getContentPane().add("p center", tempLable);
+        loginFrame.getContentPane().add("center",exitButton);
         loginFrame.pack();
 
         cardNumClearButton.addActionListener(new ActionListener() {
@@ -155,6 +159,12 @@ public class LoginPage extends ServerConn {
                         JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
                     }
                 }
+            }
+        });
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                loginFrame.dispose();
             }
         });
     }

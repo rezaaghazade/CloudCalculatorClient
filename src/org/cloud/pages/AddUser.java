@@ -22,6 +22,7 @@ public class AddUser extends ServerConn{
     JComboBox typeComboBox=new JComboBox();
     JTextField name=new JTextField(20);
     JTextField family=new JTextField(20);
+    public JButton exitButton=new JButton("Exit");
 
     private Pattern pattern;
     private Matcher matcher;
@@ -31,18 +32,20 @@ public class AddUser extends ServerConn{
 
     public AddUser()
     {
+        System.gc();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
         int height = (int) screenSize.getHeight();
 
         //addUserFrame
         addUserFrame = new JFrame("Add User");
-        addUserFrame.setBounds(width/2-250, 210, 500, 300);
+        addUserFrame.setBounds(width/2-172, 150, 500, 300);
 
         addUserFrame.getContentPane().setLayout(new RiverLayout());
         addUserFrame.setDefaultCloseOperation(addUserFrame.DISPOSE_ON_CLOSE);
         addUserFrame.setVisible(true);
         addUserFrame.setResizable(false);
+
 
 
         typeComboBox.addItem("");
@@ -65,10 +68,20 @@ public class AddUser extends ServerConn{
         addUserFrame.getContentPane().add("p center",new JLabel("Family : "));
         addUserFrame.getContentPane().add("",family);
 
+
+
         createUserBtn=new JButton("Add User");
 
         addUserFrame.getContentPane().add("p center",new JLabel(""));
         addUserFrame.getContentPane().add("p",createUserBtn);
+        addUserFrame.getContentPane().add("p",exitButton);
+        addUserFrame.pack();
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                addUserFrame.dispose();
+            }
+        });
 
         createUserBtn.addActionListener(new ActionListener() {
             @Override

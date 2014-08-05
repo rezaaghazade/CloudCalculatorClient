@@ -24,6 +24,7 @@ public class AdminUserHomePage extends ServerConn{
     public JButton addUserButton;
     public JButton addFuncButton;
     public JButton calculatorButton;
+    public JButton exitButton;
 
     public final ArrayList personInfo2;
     public JLabel informationlable;
@@ -39,6 +40,8 @@ public class AdminUserHomePage extends ServerConn{
     private Calendar calendar;
 
     public AdminUserHomePage(ArrayList personInfo) {
+
+        System.gc();
 
         personInfo2=new ArrayList(personInfo);
         //personInfo2=personInfo;
@@ -80,26 +83,29 @@ public class AdminUserHomePage extends ServerConn{
         addUserButton=new JButton("Add User");
         addFuncButton=new JButton("Add Function");
         calculatorButton=new JButton("Calculator");
+        exitButton=new JButton("Exit");
 
 
         adminPageFrame.getContentPane().add("p", new JLabel(""));
         adminPageFrame.getContentPane().add("p",addUserButton);
         adminPageFrame.getContentPane().add("p",addFuncButton);
         adminPageFrame.getContentPane().add("p",calculatorButton);
+        adminPageFrame.getContentPane().add("p",exitButton);
 
 
         addUserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                addUser=new AddUser();
                 try {
-                    if (addUser.addUserFrame.isShowing())
+                   /* if (addUser.addUserFrame.isShowing())
                     {
                         String message = "Page is Open";
                         JOptionPane.showMessageDialog(new JFrame(), message, "Information", JOptionPane.INFORMATION_MESSAGE);
-                    }
+                    }*/
                 }catch (Exception elx)
                 {
-                    addUser=new AddUser();
+
                 }
             }
         });
@@ -107,13 +113,7 @@ public class AdminUserHomePage extends ServerConn{
         addFuncButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!addFuncFrame.isShowing())
-                {
-                    addFuncFrame.getContentPane().setLayout(new RiverLayout());
-                    addFuncFrame.setDefaultCloseOperation(addFuncFrame.DISPOSE_ON_CLOSE);
-                    addFuncFrame.setVisible(true);
-                    addFuncFrame.setResizable(false);
-                }
+                AddFunc addFunc=new AddFunc();
 
             }
         });
@@ -125,6 +125,13 @@ public class AdminUserHomePage extends ServerConn{
             }
         });
 
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adminPageFrame.dispose();
+                LoginPage loginPage=new LoginPage();
+            }
+        });
         try {
             /*getServerApplication().newInstance("org.cloud.database.GetFunctions");
             functionsInfo= (ArrayList) getServerApplication().invokeMethod("GetFunctionsDetail");*/
