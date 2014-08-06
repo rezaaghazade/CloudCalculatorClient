@@ -141,13 +141,16 @@ public class LoginPage extends ServerConn {
                             informationLable.setText("CardNumber Or Password is InCorrect");
                         } else {
                             loginFrame.dispose();
+                            WriteHistory wh=new WriteHistory();
                             if ((Integer)personalArray.get(0)==0)
                             {
-                                System.out.println("Call Admin");
+                                //System.out.println("Call Admin");
+                                wh.write("Login",userNameStr);
                                 AdminUserHomePage homePage=new AdminUserHomePage(personalArray);
 
                             }else {
-                                System.out.println("Call Usual");
+                                //System.out.println("Call Usual");
+                                wh.write("Login",userNameStr);
                                 UsualUserHomePage homePage = new UsualUserHomePage(personalArray);
                             }
 

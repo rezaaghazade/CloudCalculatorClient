@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,7 +31,7 @@ public class AddUser extends ServerConn{
     private static final String USERNAME_PATTERN = "^[a-z0-9_-]{3,15}$";
     private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{4,18}$";
 
-    public AddUser()
+    public AddUser(final ArrayList personInfo)
     {
         System.gc();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -46,13 +47,9 @@ public class AddUser extends ServerConn{
         addUserFrame.setVisible(true);
         addUserFrame.setResizable(false);
 
-
-
         typeComboBox.addItem("");
         typeComboBox.addItem("ADMIN");
         typeComboBox.addItem("REGULAR");
-
-
 
         userName.setToolTipText("^[a-z0-9_-]{3,16}$ ... (3-16)");
         passWord.setToolTipText("^[a-z0-9_-]{6,18}$ ... (6-18)");
@@ -112,6 +109,13 @@ public class AddUser extends ServerConn{
                         break;
                     case 0:
                         addUser();
+                        WriteHistory wh=new WriteHistory();
+                        try {
+                            wh.write("Add User"+"."+name.getText(),(String) personInfo.get(1));
+                        }catch (Exception elx)
+                        {
+
+                        }
                         break;
                 }
 

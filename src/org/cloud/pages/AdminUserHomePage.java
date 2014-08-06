@@ -26,7 +26,7 @@ public class AdminUserHomePage extends ServerConn{
     public JButton calculatorButton;
     public JButton exitButton;
 
-    public final ArrayList personInfo2;
+    //public final ArrayList personInfo2;
     public JLabel informationlable;
 
     public ArrayList functionsInfo = new ArrayList();
@@ -39,11 +39,11 @@ public class AdminUserHomePage extends ServerConn{
     private int currentSecond;
     private Calendar calendar;
 
-    public AdminUserHomePage(ArrayList personInfo) {
+    public AdminUserHomePage(final ArrayList personInfo) {
 
         System.gc();
 
-        personInfo2=new ArrayList(personInfo);
+        //personInfo2=new ArrayList(personInfo);
         //personInfo2=personInfo;
         
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -96,7 +96,7 @@ public class AdminUserHomePage extends ServerConn{
         addUserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                addUser=new AddUser();
+                addUser=new AddUser(personInfo);
                 try {
                    /* if (addUser.addUserFrame.isShowing())
                     {
@@ -113,7 +113,7 @@ public class AdminUserHomePage extends ServerConn{
         addFuncButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddFunc addFunc=new AddFunc();
+                AddFunc addFunc=new AddFunc(personInfo);
 
             }
         });
@@ -121,7 +121,7 @@ public class AdminUserHomePage extends ServerConn{
         calculatorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                UsualUserHomePage home=new UsualUserHomePage(personInfo2);
+                UsualUserHomePage home=new UsualUserHomePage(personInfo);
             }
         });
 

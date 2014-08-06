@@ -1,5 +1,6 @@
 package org.cloud.pages;
 
+import com.sun.jndi.url.rmi.rmiURLContext;
 import org.cloud.connectToServer.ServerConn;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
@@ -40,7 +41,7 @@ public class AddFunc extends ServerConn{
 
     private final int lineCounter=40;
 
-    public AddFunc()
+    public AddFunc(final ArrayList personInfo)
     {
         System.gc();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -190,16 +191,73 @@ public class AddFunc extends ServerConn{
                         if (result==0)
                         {
                             //Add Function to Server
+                            try {
+                                if (checkForUniqueFunc())
+                                {
+                                    System.out.println((String) fieldTypeComboBox.getSelectedItem());
+                                    getServerApplication().newInstance("org.cloud.compiler.ServerCompiler");
+                                    Boolean returnFlag= (Boolean) getServerApplication().invokeMethod("addMethod",
+                                            new Object[]{new String((String) fieldTypeComboBox.getSelectedItem()),
+                                            new String("public Double Area(Double a,Double b){ return a*b; }")});
+                                    System.out.println("return Flag "+returnFlag);
+                                    if (returnFlag)
+                                    {
+                                        getServerApplication().newInstance("org.cloud.database.AddFunctionDetail");
+                                        boolean functionDetailFlag=(Boolean)getServerApplication().invokeMethod("PushFunctionDetail",
+                                                new Object[]{new String(funcName.getText().toUpperCase()),
+                                                        new String(funcProtoType.getText().toUpperCase()),
+                                                        new String((String)argNumComboBox.getSelectedItem()),
+                                                        new String((String)fieldTypeComboBox.getSelectedItem()),
+                                                        new String(description.getText())});
+
+                                        System.out.println("functionDetailFlag "+functionDetailFlag);
+
+                                        JOptionPane.showMessageDialog(new JFrame(), "Method Added To The System", "Info",
+                                                JOptionPane.INFORMATION_MESSAGE);
+
+                                        WriteHistory wh=new WriteHistory();
+                                        try {
+                                            wh.write("Add Function"+"."+funcName.getText(),(String) personInfo.get(1));
+                                        }catch (Exception elx)
+                                        {
+
+                                        }
+                                    }
+                                }
+                            }catch (Exception elx)
+                            {
+
+                                System.out.println("Add Method Error : "+elx.getCause());
+                            }
+
                         }
                         break;
-
                 }
             }
         });
 
+    }
+    public boolean checkForUniqueFunc()throws Exception
+    {
+        String funcionName=funcName.getText().toUpperCase();
+        String field= ((String) fieldTypeComboBox.getSelectedItem()).toUpperCase();
+
+        getServerApplication().newInstance("org.cloud.database.CheckForUniqueFunc");
+
+        boolean tmp=(Boolean)getServerApplication().invokeMethod("checkFunc",new Object[]{new String(funcionName),new String(field)});
+
+        System.out.println("Return : "+ tmp);
+        if (tmp==false)
+        {
+            String message = "Method With The Same Name Is Exist In The Class";
+            //int result = JOptionPane.showConfirmDialog((Component) null, message,"alert", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }else {
+            return true;
+        }
 
     }
-
     public int validateInput()
     {
         userNameValidator();
@@ -223,9 +281,9 @@ public class AddFunc extends ServerConn{
         pattern = Pattern.compile(USERNAME_PATTERN);
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         AddFunc add=new AddFunc();
-    }
+    }*/
 
   /*  public void addUser()
     {

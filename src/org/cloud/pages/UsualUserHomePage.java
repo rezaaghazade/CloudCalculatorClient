@@ -43,7 +43,7 @@ public class UsualUserHomePage extends ServerConn {
 
     public JButton exitButton;
 
-    public UsualUserHomePage(ArrayList personInfo) {
+    public UsualUserHomePage(final ArrayList personInfo) {
 
         calcTypeComboBox = new JComboBox();
 
@@ -172,6 +172,7 @@ public class UsualUserHomePage extends ServerConn {
                         funcNames=getFuncName(funcGroupedByFieldsArrayList.get(item));
                         int index=0;
                         ButtonGroup bg = new ButtonGroup();
+                        //System.out.println(funcNames.size());
                         while (index<funcNames.size())
                         {
                             final JRadioButton rd=new JRadioButton(funcNames.get(index));
@@ -227,6 +228,10 @@ public class UsualUserHomePage extends ServerConn {
                     }
                     String message="Result is : "+value.toString().toUpperCase();
                     JOptionPane.showMessageDialog(new JFrame(),message, "Info", JOptionPane.INFORMATION_MESSAGE);
+
+                    WriteHistory wh=new WriteHistory();
+                    wh.write(currentFieldTypeObj.getFieldType()+"."+currentFieldTypeObj.getFuncName(),(String) personInfo.get(1));
+
                 }catch (Exception elx)
                 {
                     String message = elx.getMessage();
