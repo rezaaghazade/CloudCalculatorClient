@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/org/cloud/pages/WriteHistory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AddUser.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/AddUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -760,7 +754,7 @@
       <workItem from="1407264165892" duration="7519000" />
       <workItem from="1407301454522" duration="9754000" />
       <workItem from="1407317215738" duration="2113000" />
-      <workItem from="1407338934982" duration="2700000" />
+      <workItem from="1407338934982" duration="2720000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -874,11 +868,15 @@
       <created>1407273473681</created>
       <updated>1407273473681</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Initial commit&#10;">
+      <created>1407341653408</created>
+      <updated>1407341653408</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113602000" />
+    <option name="totallyTimeSpent" value="113622000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
