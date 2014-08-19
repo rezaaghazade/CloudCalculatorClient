@@ -16,7 +16,7 @@ import java.util.TimerTask;
 public class AdminUserHomePage extends ServerConn{
 
     public AddUser addUser;
-    public AddFunc addFunc;
+    //public AddFunc addFunc;
 
     public JFrame adminPageFrame;
     public JFrame addFuncFrame;
@@ -24,12 +24,15 @@ public class AdminUserHomePage extends ServerConn{
     public JButton addUserButton;
     public JButton addFuncButton;
     public JButton calculatorButton;
+    public JButton userListButton;
+    public JButton changePasswdButton;
+    public JButton historyButton;
     public JButton exitButton;
 
     //public final ArrayList personInfo2;
-    public JLabel informationlable;
+    //public JLabel informationlable;
 
-    public ArrayList functionsInfo = new ArrayList();
+    //public ArrayList functionsInfo = new ArrayList();
     private static final String IMG_PATH = "./cloud-calculator.jpg";
 
     int index=0;
@@ -83,12 +86,17 @@ public class AdminUserHomePage extends ServerConn{
         addUserButton=new JButton("Add User");
         addFuncButton=new JButton("Add Function");
         calculatorButton=new JButton("Calculator");
+        userListButton=new JButton("Users List");
+        changePasswdButton=new JButton("Change Passoword");
+        historyButton=new JButton("History");
         exitButton=new JButton("Exit");
-
 
         adminPageFrame.getContentPane().add("p", new JLabel(""));
         adminPageFrame.getContentPane().add("p",addUserButton);
+        adminPageFrame.getContentPane().add("p",historyButton);
+        adminPageFrame.getContentPane().add("p",userListButton);
         adminPageFrame.getContentPane().add("p",addFuncButton);
+        adminPageFrame.getContentPane().add("p",changePasswdButton);
         adminPageFrame.getContentPane().add("p",calculatorButton);
         adminPageFrame.getContentPane().add("p",exitButton);
 
@@ -97,16 +105,6 @@ public class AdminUserHomePage extends ServerConn{
             @Override
             public void actionPerformed(ActionEvent e) {
                 addUser=new AddUser(personInfo);
-                try {
-                   /* if (addUser.addUserFrame.isShowing())
-                    {
-                        String message = "Page is Open";
-                        JOptionPane.showMessageDialog(new JFrame(), message, "Information", JOptionPane.INFORMATION_MESSAGE);
-                    }*/
-                }catch (Exception elx)
-                {
-
-                }
             }
         });
 
@@ -115,6 +113,13 @@ public class AdminUserHomePage extends ServerConn{
             public void actionPerformed(ActionEvent e) {
                 AddFunc addFunc=new AddFunc(personInfo);
 
+            }
+        });
+
+        historyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HistoryList hl=new HistoryList();
             }
         });
 
@@ -129,18 +134,9 @@ public class AdminUserHomePage extends ServerConn{
             @Override
             public void actionPerformed(ActionEvent e) {
                 adminPageFrame.dispose();
-                LoginPage loginPage=new LoginPage();
+                //LoginPage loginPage=new LoginPage();
             }
         });
-        try {
-            /*getServerApplication().newInstance("org.cloud.database.GetFunctions");
-            functionsInfo= (ArrayList) getServerApplication().invokeMethod("GetFunctionsDetail");*/
-            System.out.println();
-
-        } catch (Exception e) {
-            System.out.println("hei man " + e.getStackTrace());
-        }
-
 
     }
 

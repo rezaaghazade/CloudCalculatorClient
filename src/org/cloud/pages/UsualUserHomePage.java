@@ -1,7 +1,7 @@
 package org.cloud.pages;
 
+import domain.FieldTypeDTO;
 import org.cloud.connectToServer.ServerConn;
-import org.cloud.dto.FieldTypeDTO;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
 import java.awt.*;
@@ -27,7 +27,7 @@ public class UsualUserHomePage extends ServerConn {
     public JTextField jTextField[];
     public JButton calcBtn=new JButton("Calculate !");
     public FieldTypeDTO currentFieldTypeObj=new FieldTypeDTO();
-    public ArrayList functionsInfo = new ArrayList();
+    public ArrayList<FieldTypeDTO> functionsInfo = new ArrayList<FieldTypeDTO>();
     public ArrayList<String> fieldTypesArrayList = new ArrayList<String>();
     public HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
     public JPanel jRadioButtonsPanel=new JPanel();
@@ -44,6 +44,10 @@ public class UsualUserHomePage extends ServerConn {
     public JButton exitButton;
 
     public UsualUserHomePage(final ArrayList personInfo) {
+        //final ArrayList personInfo=new ArrayList();
+        /*personInfo.add("1");
+        personInfo.add("reza");
+        personInfo.add("aghai");*/
 
         calcTypeComboBox = new JComboBox();
 
@@ -65,7 +69,7 @@ public class UsualUserHomePage extends ServerConn {
         introFrame.getContentPane().setLayout(new RiverLayout());
         introFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         introFrame.setVisible(true);
-        introFrame.setResizable(false);
+        //introFrame.setResizable(false);
 
         JLabel pic = new JLabel();
         //add(pic);
@@ -93,15 +97,15 @@ public class UsualUserHomePage extends ServerConn {
         introFrame.getContentPane().add("p p",jTextFieldPanel);
 
         try {
-            /*getServerApplication().newInstance("org.cloud.database.GetFunctions");
-            functionsInfo= (ArrayList) getServerApplication().invokeMethod("GetFunctionsDetail");*/
+            getServerApplication().newInstance("org.cloud.database.GetFunctionsDetail");
+            functionsInfo= (ArrayList<FieldTypeDTO>) getServerApplication().invokeMethod("GetDetail");
             System.out.println();
 
         } catch (Exception e) {
             System.out.println("hei man " + e.getStackTrace());
         }
 
-        FieldTypeDTO sectionTypeDTO = new FieldTypeDTO();
+        /*FieldTypeDTO sectionTypeDTO = new FieldTypeDTO();
 
         sectionTypeDTO.setFuncName("Sum");
         sectionTypeDTO.setFuncPrototype("Public Sum(Integer a,Integer b)");
@@ -133,7 +137,7 @@ public class UsualUserHomePage extends ServerConn {
         sectionTypeDTO.setFieldType("PHYSIC");
         sectionTypeDTO.setDescription("Mass/Volume");
         functionsInfo.add(sectionTypeDTO);
-
+*/
 
         defineSectionType();
         defineFuncForEachField();
@@ -245,9 +249,64 @@ public class UsualUserHomePage extends ServerConn {
             @Override
             public void actionPerformed(ActionEvent e) {
                 introFrame.dispose();
-                LoginPage log=new LoginPage();
+                WriteHistory wh=new WriteHistory();
+                try {
+                    wh.write("Exit", (String) personInfo.get(1));
+                }catch (Exception ex)
+                {
+
+                }
+
+                //LoginPage log=new LoginPage();
             }
         });
+    }
+
+    public void defineSectionType() {
+        FieldTypeDTO sectionTypeDTO = new FieldTypeDTO();
+        int i = 0;
+        String tmp;
+        while (i < functionsInfo.size()) {
+            sectionTypeDTO = (FieldTypeDTO) functionsInfo.get(i);
+            tmp = sectionTypeDTO.getFieldType();
+            //System.out.println(tmp);
+            if (!fieldTypesArrayList.contains(tmp))
+            {
+                fieldTypesArrayList.add(tmp);
+            }
+            i++;
+        }
+        sectionTypeDTO = null;
+        tmp = null;
+    }
+
+    //error is here
+    public void defineFuncForEachField() {
+
+        int i = 0;
+        int j=0;
+        String tmp;
+        String fieldName="";
+        ArrayList tempArrayList;
+        while (i<fieldTypesArrayList.size())
+        {
+            tempArrayList=new ArrayList();
+            fieldName=fieldTypesArrayList.get(i);
+            while (j<functionsInfo.size())
+            {
+                String tmpField=((FieldTypeDTO) functionsInfo.get(j)).getFieldType();
+                if (fieldName.equals(tmpField))
+                {
+                    //System.out.println("Equal");
+                    tempArrayList.add(functionsInfo.get(j));
+                }
+                j++;
+            }
+            j=0;
+            funcGroupedByFieldsArrayList.put(fieldName,tempArrayList);
+            tempArrayList=null;
+            i++;
+        }
     }
 
     public void createArgTextField(Integer argNum) {
@@ -307,33 +366,9 @@ public class UsualUserHomePage extends ServerConn {
         return tmp;
     }
 
-    public void defineFuncForEachField() {
 
-        int i = 0;
-        int j=0;
-        String tmp;
-        String fieldName="";
-            while (i<fieldTypesArrayList.size())
-            {
-                ArrayList tempArrayList=new ArrayList();
-                fieldName=fieldTypesArrayList.get(i);
-                //System.out.println(fieldName);
-                while (j<functionsInfo.size())
-                {
-                    if (((FieldTypeDTO) functionsInfo.get(j)).getFieldType()==fieldName)
-                    {
-                        tempArrayList.add(functionsInfo.get(j));
-                    }
-                    j++;
-                }
-                j=0;
-                funcGroupedByFieldsArrayList.put(fieldName,tempArrayList);
-                tempArrayList=null;
-                i++;
-            }
-    }
 
-    public void show() {
+    /*public void show() {
         int index=0;
         ArrayList arr=new ArrayList();
         while (index<funcGroupedByFieldsArrayList.size())
@@ -341,24 +376,9 @@ public class UsualUserHomePage extends ServerConn {
             arr=funcGroupedByFieldsArrayList.get(fieldTypesArrayList.get(index));
             index++;
         }
-    }
+    }*/
 
-    public void defineSectionType() {
-        FieldTypeDTO sectionTypeDTO = new FieldTypeDTO();
-        int i = 0;
-        String tmp;
-        while (i < functionsInfo.size()) {
-            sectionTypeDTO = (FieldTypeDTO) functionsInfo.get(i);
-            tmp = sectionTypeDTO.getFieldType();
-            if (!fieldTypesArrayList.contains(tmp))
-            {
-                fieldTypesArrayList.add(tmp);
-            }
-            i++;
-        }
-        sectionTypeDTO = null;
-        tmp = null;
-    }
+
 
     public static void main(String[] args) {
         //UsualUserHomePage homePage = new UsualUserHomePage();

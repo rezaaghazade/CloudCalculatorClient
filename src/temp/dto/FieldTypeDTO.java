@@ -1,6 +1,4 @@
-package org.cloud.dto;
-
-import com.sun.xml.internal.bind.annotation.OverrideAnnotationOf;
+package temp.dto;
 
 /**
  * Created by reza on 7/24/14.

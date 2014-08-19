@@ -197,13 +197,13 @@ public class LoginPage extends ServerConn {
     {
         userNameValidator();
         matcher = pattern.matcher(userNameStr);
-        System.out.println(matcher.matches());
+        //System.out.println(matcher.matches());
         if (!matcher.matches())
             return false;
 
         passWordValidator();
         matcher = pattern.matcher(passWdStr);
-        System.out.println(matcher.matches());
+        //System.out.println(matcher.matches());
         if (!matcher.matches())
             return false;
 

@@ -37,7 +37,6 @@ public class AddFunc extends ServerConn{
     private Matcher matcher;
 
     private static final String USERNAME_PATTERN = "^[A-Za-z_-]{1,15}$";
-    private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{4,18}$";
 
     private final int lineCounter=40;
 
