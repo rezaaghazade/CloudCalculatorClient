@@ -44,10 +44,6 @@ public class UsualUserHomePage extends ServerConn {
     public JButton exitButton;
 
     public UsualUserHomePage(final ArrayList personInfo) {
-        //final ArrayList personInfo=new ArrayList();
-        /*personInfo.add("1");
-        personInfo.add("reza");
-        personInfo.add("aghai");*/
 
         calcTypeComboBox = new JComboBox();
 
@@ -65,7 +61,7 @@ public class UsualUserHomePage extends ServerConn {
         int height = (int) screenSize.getHeight();
 
         introFrame = new JFrame("Cloud Calculator");
-        introFrame.setBounds(width/2-250, 110, 500, 600);
+        introFrame.setBounds(width/2-250, 110, 500, 623);
         introFrame.getContentPane().setLayout(new RiverLayout());
         introFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         introFrame.setVisible(true);
@@ -79,8 +75,6 @@ public class UsualUserHomePage extends ServerConn {
         //pic
 
         introFrame.getContentPane().add("center",pic);
-
-
         exitButton=new JButton("Exit");
         //Clock start
         start();
@@ -104,40 +98,6 @@ public class UsualUserHomePage extends ServerConn {
         } catch (Exception e) {
             System.out.println("hei man " + e.getStackTrace());
         }
-
-        /*FieldTypeDTO sectionTypeDTO = new FieldTypeDTO();
-
-        sectionTypeDTO.setFuncName("Sum");
-        sectionTypeDTO.setFuncPrototype("Public Sum(Integer a,Integer b)");
-        sectionTypeDTO.setArgNum(2);
-        sectionTypeDTO.setFieldType("MATHEMATIC");
-        sectionTypeDTO.setDescription("a+b");
-        functionsInfo.add(sectionTypeDTO);
-
-        sectionTypeDTO = new FieldTypeDTO();
-        sectionTypeDTO.setFuncName("CircleArea");
-        sectionTypeDTO.setFuncPrototype("Public CircleArea(Double a)");
-        sectionTypeDTO.setArgNum(1);
-        sectionTypeDTO.setFieldType("PHYSIC");
-        sectionTypeDTO.setDescription("MATH.PI*(a*a)");
-        functionsInfo.add(sectionTypeDTO);
-
-        sectionTypeDTO = new FieldTypeDTO();
-        sectionTypeDTO.setFuncName("Minus");
-        sectionTypeDTO.setFuncPrototype("Public Minus(Integer a,Integer b)");
-        sectionTypeDTO.setArgNum(2);
-        sectionTypeDTO.setFieldType("MATHEMATIC");
-        sectionTypeDTO.setDescription("a-b");
-        functionsInfo.add(sectionTypeDTO);
-
-        sectionTypeDTO = new FieldTypeDTO();
-        sectionTypeDTO.setFuncName("Density");
-        sectionTypeDTO.setFuncPrototype("Public Density(Double mass,Double Volume)");
-        sectionTypeDTO.setArgNum(2);
-        sectionTypeDTO.setFieldType("PHYSIC");
-        sectionTypeDTO.setDescription("Mass/Volume");
-        functionsInfo.add(sectionTypeDTO);
-*/
 
         defineSectionType();
         defineFuncForEachField();
@@ -234,7 +194,7 @@ public class UsualUserHomePage extends ServerConn {
                     JOptionPane.showMessageDialog(new JFrame(),message, "Info", JOptionPane.INFORMATION_MESSAGE);
 
                     WriteHistory wh=new WriteHistory();
-                    wh.write(currentFieldTypeObj.getFieldType()+"."+currentFieldTypeObj.getFuncName(),(String) personInfo.get(1));
+                    wh.write(currentFieldTypeObj.getFieldType()+":"+currentFieldTypeObj.getFuncName(),(String) personInfo.get(1));
 
                 }catch (Exception elx)
                 {
@@ -251,13 +211,13 @@ public class UsualUserHomePage extends ServerConn {
                 introFrame.dispose();
                 WriteHistory wh=new WriteHistory();
                 try {
-                    wh.write("Exit", (String) personInfo.get(1));
+                    if ((Integer)personInfo.get(0)==1)
+                        wh.write("Exit", (String) personInfo.get(1));
+                    System.exit(0);
                 }catch (Exception ex)
                 {
 
                 }
-
-                //LoginPage log=new LoginPage();
             }
         });
     }
@@ -280,7 +240,7 @@ public class UsualUserHomePage extends ServerConn {
         tmp = null;
     }
 
-    //error is here
+    //error is Here
     public void defineFuncForEachField() {
 
         int i = 0;
@@ -297,7 +257,6 @@ public class UsualUserHomePage extends ServerConn {
                 String tmpField=((FieldTypeDTO) functionsInfo.get(j)).getFieldType();
                 if (fieldName.equals(tmpField))
                 {
-                    //System.out.println("Equal");
                     tempArrayList.add(functionsInfo.get(j));
                 }
                 j++;
@@ -335,7 +294,6 @@ public class UsualUserHomePage extends ServerConn {
 
     public void jtextFieldInputChecker(int lenght) {
         if (lenght==0)
-            //System.out.println("disable");
             calcBtn.setEnabled(false);
     }
 
@@ -348,7 +306,6 @@ public class UsualUserHomePage extends ServerConn {
             if (((FieldTypeDTO)funcGroupedByFieldsArrayList.get(itemSelected).get(index)).getFuncName()==funName)
             {
                 fieldTypeDTO=((FieldTypeDTO)funcGroupedByFieldsArrayList.get(itemSelected).get(index));
-                //System.out.println(fieldTypeDTO.getFuncPrototype());
             }
             index++;
         }

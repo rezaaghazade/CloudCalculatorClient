@@ -28,11 +28,6 @@ public class AdminUserHomePage extends ServerConn{
     public JButton changePasswdButton;
     public JButton historyButton;
     public JButton exitButton;
-
-    //public final ArrayList personInfo2;
-    //public JLabel informationlable;
-
-    //public ArrayList functionsInfo = new ArrayList();
     private static final String IMG_PATH = "./cloud-calculator.jpg";
 
     int index=0;
@@ -45,9 +40,6 @@ public class AdminUserHomePage extends ServerConn{
     public AdminUserHomePage(final ArrayList personInfo) {
 
         System.gc();
-
-        //personInfo2=new ArrayList(personInfo);
-        //personInfo2=personInfo;
         
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = (int) screenSize.getWidth();
@@ -123,6 +115,19 @@ public class AdminUserHomePage extends ServerConn{
             }
         });
 
+        userListButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UsersList usersList=new UsersList();
+            }
+        });
+        changePasswdButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ChangePassword chP=new ChangePassword();
+            }
+        });
+
         calculatorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -134,6 +139,9 @@ public class AdminUserHomePage extends ServerConn{
             @Override
             public void actionPerformed(ActionEvent e) {
                 adminPageFrame.dispose();
+                WriteHistory wh=new WriteHistory();
+                wh.write("Exit", (String) personInfo.get(1));
+                System.exit(0);
                 //LoginPage loginPage=new LoginPage();
             }
         });

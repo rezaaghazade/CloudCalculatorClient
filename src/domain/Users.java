@@ -9,7 +9,6 @@ public class Users implements Serializable{
 
     public String ID;
     public Integer Type;
-    public String Passwd;
     public String Name;
     public String Family;
 
@@ -27,14 +26,6 @@ public class Users implements Serializable{
 
     public void setType(Integer type) {
         Type = type;
-    }
-
-    public String getPasswd() {
-        return Passwd;
-    }
-
-    public void setPasswd(String passwd) {
-        Passwd = passwd;
     }
 
     public String getName() {

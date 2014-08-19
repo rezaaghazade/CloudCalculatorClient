@@ -27,6 +27,6 @@ public class MD5 {
     }
     public static void main(String[] args) {
         MD5 obj=new MD5();
-        System.out.println(obj.md5("1991"));
+        System.out.println(obj.md5("19911210"));
     }
 }

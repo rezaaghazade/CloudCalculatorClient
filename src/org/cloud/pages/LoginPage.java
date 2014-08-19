@@ -3,7 +3,6 @@ package org.cloud.pages;
 import org.cloud.connectToServer.ServerConn;
 import org.cloud.encryption.MD5;
 import se.datadosen.component.RiverLayout;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -49,7 +48,7 @@ public class LoginPage extends ServerConn {
         int height = (int) screenSize.getHeight();
 
         loginFrame = new JFrame("Cloud Calculator");
-        loginFrame.setBounds(width/2-250, 110, 500, 500);
+        loginFrame.setBounds(width/2-250, 110, 500, 550);
         loginFrame.getContentPane().setLayout(new RiverLayout());
         loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         loginFrame.setVisible(true);
@@ -59,7 +58,6 @@ public class LoginPage extends ServerConn {
         ImageIcon test = new ImageIcon("cloud-calculator.jpg");
         pic.setIcon(test);
         //pic
-
         loginFrame.getContentPane().add("",pic);
 
     }
@@ -138,14 +136,15 @@ public class LoginPage extends ServerConn {
                                 new Object[]{new String(userNameStr), new String(passWdStr)});
 
                         if (personalArray.size() == 0) {
-                            informationLable.setText("CardNumber Or Password is InCorrect");
+                            String message = "CardNumber Or Password is InCorrect";
+                            JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
                         } else {
                             loginFrame.dispose();
                             WriteHistory wh=new WriteHistory();
                             if ((Integer)personalArray.get(0)==0)
                             {
                                 //System.out.println("Call Admin");
-                                wh.write("Login",userNameStr);
+                                wh.write("Login",userNameStr.toUpperCase());
                                 AdminUserHomePage homePage=new AdminUserHomePage(personalArray);
 
                             }else {

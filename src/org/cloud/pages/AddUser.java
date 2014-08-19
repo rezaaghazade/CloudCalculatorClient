@@ -110,7 +110,7 @@ public class AddUser extends ServerConn{
                         addUser();
                         WriteHistory wh=new WriteHistory();
                         try {
-                            wh.write("Add User"+"."+name.getText(),(String) personInfo.get(1));
+                            wh.write("Add User"+" : "+name.getText(),(String) personInfo.get(1));
                         }catch (Exception elx)
                         {
 

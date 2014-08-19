@@ -1,5 +1,6 @@
 package org.cloud.pages;
 
+import com.sun.swing.internal.plaf.metal.resources.metal_sv;
 import org.cloud.connectToServer.ServerConn;
 import org.cloud.encryption.MD5;
 import se.datadosen.component.RiverLayout;
@@ -26,7 +27,7 @@ public class ChangePassword extends ServerConn {
     private Matcher matcher;
 
     private static final String USERNAME_PATTERN = "^[A-Za-z0-9_-]{3,15}$";
-    private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{4,18}$";
+    private static final String PASSWORD_PATTERN = "^[0-9]{4,18}$";
 
     public ChangePassword()
     {
@@ -68,47 +69,54 @@ public class ChangePassword extends ServerConn {
                     case 1:
                         message = "UserName Is Not in Correct Style";
                         JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
+                        message="";
                         break;
                     case 2:
                         message = "Password Is Not in Correct Style";
                         JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
+                        message="";
                         break;
                     case 3:
                         message = "Password And Confirm Is Not The Same";
                         JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
+                        message="";
                         break;
                     case 0:
                         boolean checkFlag=checkForUniqueUser();
                         if (checkFlag)
+                        {
                             changePassword();
+                            WriteHistory wh=new WriteHistory();
+                            wh.write("Change Password",userName.getText());
+                        }
+
                         else {
                             message = "UserName is Not Exist";
                             JOptionPane.showMessageDialog(new JFrame(), message, "Error", JOptionPane.ERROR_MESSAGE);
+                            message="";
                         }
                         break;
                 }
             }
         });
     }
-
     public boolean checkForUniqueUser()
     {
         try {
 
             getServerApplication().newInstance("org.cloud.database.CheckForUniqueUser");
             MD5 md5=new MD5();
-            Boolean flag= (Boolean) getServerApplication().invokeMethod("userUniqueCheck",new Object[]{
-                    new String(userName.getText())});
+            Boolean flag= (Boolean) getServerApplication().invokeMethod("userUniqueCheck",new Object[]{new String(userName.getText())});
 
             if (!flag)
-                return false;
+                return true;
 
         }catch (Exception e)
         {
 
             System.out.println(e.getMessage());
         }
-        return true;
+        return false;
     }
     public void changePassword()
     {
@@ -141,11 +149,13 @@ public class ChangePassword extends ServerConn {
         if (!matcher.matches())
             return 2;
 
-        if (passWord.getText()!=passWordConfirm.getText())
-            return 3;
+        //**************equal
+        /*if (passWord.getText().equals(passWordConfirm.getText()))
+            return 3;*/
 
         return 0;
     }
+
     public void userNameValidator()
     {
         pattern = Pattern.compile(USERNAME_PATTERN);

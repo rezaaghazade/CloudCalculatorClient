@@ -280,31 +280,4 @@ public class AddFunc extends ServerConn{
         pattern = Pattern.compile(USERNAME_PATTERN);
     }
 
-    /*public static void main(String[] args) {
-        AddFunc add=new AddFunc();
-    }*/
-
-  /*  public void addUser()
-    {
-        try {
-
-            getServerApplication().newInstance("org.cloud.database.AddUser");
-            MD5 md5=new MD5();
-            Boolean flag= (Boolean) getServerApplication().invokeMethod("PushUser",new Object[]{
-                    new String(userName.getText()),
-                    new String(md5.md5(passWord.getText())),
-                    new Integer((typeComboBox.getSelectedIndex()-1)),
-                    new String(name.getText()),
-                    new String(family.getText())});
-
-            String message = "User "+userName.getText()+" Added.";
-            JOptionPane.showMessageDialog(new JFrame(), message, "Information", JOptionPane.INFORMATION_MESSAGE);
-        }catch (Exception e)
-        {
-            System.out.println("Add User : "+e.getMessage());
-        }
-
-    }
- */
-
 }
