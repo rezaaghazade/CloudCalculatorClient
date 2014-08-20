@@ -212,8 +212,14 @@ public class UsualUserHomePage extends ServerConn {
                 WriteHistory wh=new WriteHistory();
                 try {
                     if ((Integer)personInfo.get(0)==1)
+                    {
                         wh.write("Exit", (String) personInfo.get(1));
-                    System.exit(0);
+                        System.exit(0);
+                    }
+                    else
+                    {
+
+                    }
                 }catch (Exception ex)
                 {
 

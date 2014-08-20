@@ -9,6 +9,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,7 +30,7 @@ public class AddFunc extends ServerConn{
     public ArrayList fieldTypesArray;
     public JFileChooser fileChooser = new JFileChooser();
     public String inputFileAddress = "";
-    //public JLabel inputFileAddressLable=new JLabel();
+    public BufferedReader br = null;
     public JButton addFunBtn=new JButton("Add !");
     public JButton exitButton=new JButton("Exit");
 
@@ -193,11 +195,13 @@ public class AddFunc extends ServerConn{
                             try {
                                 if (checkForUniqueFunc())
                                 {
+                                    br = new BufferedReader(new FileReader(inputFileAddress));
+
                                     System.out.println((String) fieldTypeComboBox.getSelectedItem());
                                     getServerApplication().newInstance("org.cloud.compiler.ServerCompiler");
                                     Boolean returnFlag= (Boolean) getServerApplication().invokeMethod("addMethod",
                                             new Object[]{new String((String) fieldTypeComboBox.getSelectedItem()),
-                                            new String("public Double Area(Double a,Double b){ return a*b; }")});
+                                            new String(inputFileTo1Line())});
                                     System.out.println("return Flag "+returnFlag);
                                     if (returnFlag)
                                     {
@@ -235,6 +239,23 @@ public class AddFunc extends ServerConn{
             }
         });
 
+    }
+    public String inputFileTo1Line()
+    {
+        String sCurrentLine;
+        StringBuffer sb = new StringBuffer();
+        try {
+            while ((sCurrentLine = br.readLine()) != null) {
+                sb.append(sCurrentLine);
+        }
+        }catch (Exception e)
+        {
+            System.out.println("Error in Append Input File to 1 line "+e.getMessage());
+        }
+        System.out.println(sb.toString());
+        System.out.println(sb);
+
+        return sb.toString();
     }
     public boolean checkForUniqueFunc()throws Exception
     {
