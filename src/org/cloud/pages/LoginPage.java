@@ -32,14 +32,14 @@ public class LoginPage extends ServerConn {
     public ArrayList personalArray;
     public JButton exitButton;
 
-
     private Pattern pattern;
     private Matcher matcher;
 
     private static final String USERNAME_PATTERN = "^[a-z0-9_-]{3,15}$";
     private static final String PASSWORD_PATTERN = "^[a-z0-9_-]{4,18}$";
 
-    public LoginPage(){
+    public LoginPage()
+    {
 
         System.gc();
 
@@ -61,8 +61,8 @@ public class LoginPage extends ServerConn {
         loginFrame.getContentPane().add("",pic);
 
     }
-
-    public void ShowLoginPagePage() {
+    public void ShowLoginPagePage()
+    {
 
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
@@ -170,19 +170,8 @@ public class LoginPage extends ServerConn {
             }
         });
     }
-
-    /*public boolean checkInput(String cardNum, String passWd) {
-        try {
-            Integer tempNum1 = new Integer(Integer.parseInt(cardNum));
-            Integer tempNum2 = new Integer(Integer.parseInt(passWd));
-            return true;
-        } catch (Exception e) {
-            informationLable.setText("Type UserName Or Password In True Style");
-            return false;
-        }
-    }*/
-
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         try {
             LoginPage introPage = new LoginPage();
             introPage.ShowLoginPagePage();
@@ -191,7 +180,6 @@ public class LoginPage extends ServerConn {
         }
 
     }
-
     public boolean validateInput(String userNameStr,String passWdStr)
     {
         userNameValidator();

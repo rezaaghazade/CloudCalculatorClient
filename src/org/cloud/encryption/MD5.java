@@ -23,6 +23,7 @@ public class MD5 {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
+
         return md5;
     }
     public static void main(String[] args) {

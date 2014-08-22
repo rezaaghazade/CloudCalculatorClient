@@ -21,6 +21,7 @@ public class ServerConn {
             System.out.println("Error in Static Block : "+e.getMessage());
         }
     }
+
     public ServerApplication getServerApplication()
     {
         return serverApplication;

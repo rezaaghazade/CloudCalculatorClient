@@ -184,6 +184,7 @@ public class UsualUserHomePage extends ServerConn {
                     {
                             value= (Double) getServerApplication().invokeMethod(
                                 currentFieldTypeObj.getFuncName(),new Object[]{new Double(jTextField[0].getText())});
+                        System.out.println();
                     }
                     if (currentFieldTypeObj.getArgNum()==2)
                     {

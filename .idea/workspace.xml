@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/encryption/MD5.java" afterPath="$PROJECT_DIR$/src/org/cloud/encryption/MD5.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" afterPath="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -75,29 +80,38 @@
       <file leaf-file-name="AddFunc.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="255" column="31" selection-start="11325" selection-end="11391" vertical-scroll-proportion="0.0" vertical-offset="2473" max-vertical-offset="4290">
+            <state line="210" column="104" selection-start="9332" selection-end="9332" vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="4815">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsualUserHomePage.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
+      <file leaf-file-name="ServerConn.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="221" column="21" selection-start="9491" selection-end="9491" vertical-scroll-proportion="0.97077924" vertical-offset="2432" max-vertical-offset="5265">
+            <state line="10" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
               <folding>
-                <element signature="e#1114#1133#0" expanded="true" />
-                <element signature="e#8999#9590#0" expanded="true" />
-                <element signature="e#9579#9580#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#572#573#0" expanded="false" />
+                <element signature="e#612#613#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminUserHomePage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java">
+      <file leaf-file-name="test.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/temp/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="48" selection-start="3220" selection-end="3220" vertical-scroll-proportion="0.0" vertical-offset="1022" max-vertical-offset="2070">
+            <state line="25" column="1" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="0.023847377" vertical-offset="345" max-vertical-offset="2880">
               <folding />
             </state>
           </provider>
@@ -126,7 +140,6 @@
         <option value="$PROJECT_DIR$/src/org/cloud/client/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/client/SectionType.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/client/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" />
         <option value="dbtable:/937005e0/53538e76-1b6a-4333-a10e-b51ab0b44c3d/finalProject..USERS" />
         <option value="dbtable:/937005e0/53538e76-1b6a-4333-a10e-b51ab0b44c3d/finalProject..FUNCTIONS" />
         <option value="$PROJECT_DIR$/src/temp/Clock.java" />
@@ -134,24 +147,25 @@
         <option value="$PROJECT_DIR$/src/org/cloud/dto/FieldTypeDTO.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/Picture.java" />
-        <option value="$PROJECT_DIR$/src/temp/test.java" />
         <option value="$PROJECT_DIR$/src/domain/FieldTypeDTO.java" />
         <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..HISTORY" />
-        <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..FUNCTIONS" />
         <option value="$PROJECT_DIR$/src/domain/History.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/HistoryList.java" />
         <option value="$PROJECT_DIR$/src/temp/tmp/Users.java" />
         <option value="$PROJECT_DIR$/src/domain/Users.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/UsersList.java" />
         <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..USERS" />
-        <option value="$PROJECT_DIR$/src/org/cloud/encryption/MD5.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/AddUser.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/WriteHistory.java" />
-        <option value="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/ChangePassword.java" />
-        <option value="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/encryption/MD5.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" />
+        <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..FUNCTIONS" />
+        <option value="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" />
+        <option value="$PROJECT_DIR$/src/temp/test.java" />
       </list>
     </option>
   </component>
@@ -159,9 +173,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-3" />
+    <option name="y" value="21" />
     <option name="width" value="1366" />
-    <option name="height" value="771" />
+    <option name="height" value="747" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -191,7 +205,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -222,6 +235,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="temp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,6 +328,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -389,28 +407,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="AddFunc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="org.cloud.pages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="org.cloud.pages.AddFunc" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CloudCalculatorClient" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="ChangePassword" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -469,6 +465,28 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="org.cloud.encryption.MD5" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CloudCalculatorClient" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="temp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="temp.test" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -702,18 +720,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.LoginPage" />
-      <item index="1" class="java.lang.String" itemvalue="Application.AddFunc" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ChangePassword" />
-      <item index="3" class="java.lang.String" itemvalue="Application.UsualUserHomePage" />
-      <item index="4" class="java.lang.String" itemvalue="Application.MD5" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ChangePassword" />
+      <item index="2" class="java.lang.String" itemvalue="Application.UsualUserHomePage" />
+      <item index="3" class="java.lang.String" itemvalue="Application.MD5" />
+      <item index="4" class="java.lang.String" itemvalue="Application.test" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.LoginPage" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MD5" />
-        <item index="2" class="java.lang.String" itemvalue="Application.UsualUserHomePage" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ChangePassword" />
-        <item index="4" class="java.lang.String" itemvalue="Application.AddFunc" />
+        <item index="1" class="java.lang.String" itemvalue="Application.test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.MD5" />
+        <item index="3" class="java.lang.String" itemvalue="Application.UsualUserHomePage" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ChangePassword" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -772,7 +790,13 @@
       <workItem from="1407610986198" duration="118000" />
       <workItem from="1407611472735" duration="8950000" />
       <workItem from="1408421780356" duration="10404000" />
-      <workItem from="1408436530929" duration="2684000" />
+      <workItem from="1408436530929" duration="2952000" />
+      <workItem from="1408558492586" duration="6109000" />
+      <workItem from="1408597359954" duration="404000" />
+      <workItem from="1408600108547" duration="1611000" />
+      <workItem from="1408619562960" duration="2939000" />
+      <workItem from="1408644830668" duration="5724000" />
+      <workItem from="1408726569230" duration="1575000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -906,11 +930,15 @@
       <created>1408545257298</created>
       <updated>1408545257298</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Initial commit&#10;">
+      <created>1408545265014</created>
+      <updated>1408545265014</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142139000" />
+    <option name="totallyTimeSpent" value="160769000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -933,8 +961,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-3" width="1366" height="771" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="21" width="1366" height="747" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -955,8 +983,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2265861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37195122" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22356495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35060975" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1018,26 +1046,14 @@
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="5" selection-start="5189" selection-end="5189" vertical-scroll-proportion="0.0" vertical-offset="2010" max-vertical-offset="2250">
-          <folding>
-            <element signature="docComment;class#LoginPage#0" expanded="false" />
-            <element signature="method#LoginPage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#ShowLoginPagePage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#main#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#validateInput#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#userNameValidator#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#passWordValidator#0;class#LoginPage#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
-          <folding>
-            <element signature="e#1114#1133#0" expanded="true" />
-            <element signature="e#8999#9590#0" expanded="true" />
-            <element signature="e#9579#9580#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1051,33 +1067,25 @@
     <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="19" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="510">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="139" column="50" selection-start="5388" selection-end="5388" vertical-scroll-proportion="0.0" vertical-offset="2085" max-vertical-offset="2475">
-          <folding>
-            <element signature="docComment;class#LoginPage#0" expanded="false" />
-            <element signature="method#LoginPage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#ShowLoginPagePage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#main#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#validateInput#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#userNameValidator#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#passWordValidator#0;class#LoginPage#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
-          <folding>
-            <element signature="e#1114#1133#0" expanded="true" />
-            <element signature="e#8999#9590#0" expanded="true" />
-            <element signature="e#9579#9580#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1091,33 +1099,25 @@
     <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="435">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="139" column="50" selection-start="5388" selection-end="5388" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2475">
-          <folding>
-            <element signature="docComment;class#LoginPage#0" expanded="false" />
-            <element signature="method#LoginPage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#ShowLoginPagePage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#main#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#validateInput#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#userNameValidator#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#passWordValidator#0;class#LoginPage#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
-          <folding>
-            <element signature="e#1114#1133#0" expanded="true" />
-            <element signature="e#8999#9590#0" expanded="true" />
-            <element signature="e#9579#9580#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,33 +1131,25 @@
     <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="435">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="116" column="9" selection-start="4335" selection-end="4335" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="2505">
-          <folding>
-            <element signature="docComment;class#LoginPage#0" expanded="false" />
-            <element signature="method#LoginPage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#ShowLoginPagePage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#main#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#validateInput#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#userNameValidator#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#passWordValidator#0;class#LoginPage#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="49" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1125">
-          <folding>
-            <element signature="e#1114#1133#0" expanded="true" />
-            <element signature="e#8999#9590#0" expanded="true" />
-            <element signature="e#9579#9580#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1171,7 +1163,11 @@
     <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="495">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1252,11 +1248,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/temp/dto/FieldTypeDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="341" selection-end="341" vertical-scroll-proportion="0.22575517" vertical-offset="83" max-vertical-offset="780">
-          <folding>
-            <element signature="e#299#300#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="15" column="33" selection-start="341" selection-end="341" vertical-scroll-proportion="0.22575517" vertical-offset="83" max-vertical-offset="780" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../HexConvertor/src/org/readfile/io/ClearInput.java">
@@ -1271,34 +1263,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/temp/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="28" selection-start="939" selection-end="939" vertical-scroll-proportion="0.3100159" vertical-offset="195" max-vertical-offset="960" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/FieldTypeDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="780">
           <folding>
-            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..HISTORY">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..FUNCTIONS">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/History.java">
@@ -1320,19 +1299,12 @@
         <state line="49" column="16" selection-start="975" selection-end="975" vertical-scroll-proportion="0.6200318" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/encryption/MD5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="39" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..USERS">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AddUser.java">
@@ -1353,21 +1325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="4" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="36" selection-start="1919" selection-end="1919" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="870">
-          <folding>
-            <element signature="docComment;class#LoginPage#0" expanded="false" />
-            <element signature="method#LoginPage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#ShowLoginPagePage#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#main#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#validateInput#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#userNameValidator#0;class#LoginPage#0" expanded="false" />
-            <element signature="method#passWordValidator#0;class#LoginPage#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1392,20 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="255" column="31" selection-start="11325" selection-end="11391" vertical-scroll-proportion="0.0" vertical-offset="2473" max-vertical-offset="4290">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="48" selection-start="3220" selection-end="3220" vertical-scroll-proportion="0.0" vertical-offset="1022" max-vertical-offset="2070">
@@ -1413,14 +1356,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/encryption/MD5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="5" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="21" selection-start="9491" selection-end="9491" vertical-scroll-proportion="0.97077924" vertical-offset="2432" max-vertical-offset="5265">
+        <state line="189" column="21" selection-start="8085" selection-end="8085" vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="5235">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..FUNCTIONS">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="210" column="104" selection-start="9332" selection-end="9332" vertical-scroll-proportion="0.0" vertical-offset="2790" max-vertical-offset="4455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding>
-            <element signature="e#1114#1133#0" expanded="true" />
-            <element signature="e#8999#9590#0" expanded="true" />
-            <element signature="e#9579#9580#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/temp/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="1" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="0.023847377" vertical-offset="345" max-vertical-offset="2880">
+          <folding />
         </state>
       </provider>
     </entry>

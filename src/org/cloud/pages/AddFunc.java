@@ -196,18 +196,26 @@ public class AddFunc extends ServerConn{
                                 if (checkForUniqueFunc())
                                 {
                                     br = new BufferedReader(new FileReader(inputFileAddress));
+                                    String functionLine=inputFileTo1Line();
 
-                                    System.out.println((String) fieldTypeComboBox.getSelectedItem());
+                                    if (!functionLine.toLowerCase().contains(funcName.getText().toLowerCase()))
+                                    {
+                                        JOptionPane.showMessageDialog(new JFrame(), "Function Name is Not In Input File", "Info",
+                                                JOptionPane.ERROR_MESSAGE);
+                                        break;
+
+                                    }
+                                    //System.out.println((String) fieldTypeComboBox.getSelectedItem());
                                     getServerApplication().newInstance("org.cloud.compiler.ServerCompiler");
                                     Boolean returnFlag= (Boolean) getServerApplication().invokeMethod("addMethod",
                                             new Object[]{new String((String) fieldTypeComboBox.getSelectedItem()),
-                                            new String(inputFileTo1Line())});
+                                            new String(functionLine)});
                                     System.out.println("return Flag "+returnFlag);
                                     if (returnFlag)
                                     {
                                         getServerApplication().newInstance("org.cloud.database.AddFunctionDetail");
                                         boolean functionDetailFlag=(Boolean)getServerApplication().invokeMethod("PushFunctionDetail",
-                                                new Object[]{new String(funcName.getText().toUpperCase()),
+                                                new Object[]{new String(funcName.getText()),
                                                         new String(funcProtoType.getText().toUpperCase()),
                                                         new String((String)argNumComboBox.getSelectedItem()),
                                                         new String((String)fieldTypeComboBox.getSelectedItem()),
@@ -225,6 +233,10 @@ public class AddFunc extends ServerConn{
                                         {
 
                                         }
+                                    }else
+                                    {
+                                        JOptionPane.showMessageDialog(new JFrame(), "Method Not Added", "Info",
+                                                JOptionPane.ERROR_MESSAGE);
                                     }
                                 }
                             }catch (Exception elx)
@@ -238,7 +250,6 @@ public class AddFunc extends ServerConn{
                 }
             }
         });
-
     }
     public String inputFileTo1Line()
     {
@@ -252,7 +263,7 @@ public class AddFunc extends ServerConn{
         {
             System.out.println("Error in Append Input File to 1 line "+e.getMessage());
         }
-        System.out.println(sb.toString());
+        //System.out.println(sb.toString());
         System.out.println(sb);
 
         return sb.toString();
