@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/encryption/MD5.java" afterPath="$PROJECT_DIR$/src/org/cloud/encryption/MD5.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" afterPath="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -796,7 +791,7 @@
       <workItem from="1408600108547" duration="1611000" />
       <workItem from="1408619562960" duration="2939000" />
       <workItem from="1408644830668" duration="5724000" />
-      <workItem from="1408726569230" duration="1575000" />
+      <workItem from="1408726569230" duration="1596000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -934,11 +929,15 @@
       <created>1408545265014</created>
       <updated>1408545265014</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Initial commit&#10;">
+      <created>1408730034268</created>
+      <updated>1408730034268</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160769000" />
+    <option name="totallyTimeSpent" value="160790000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
