@@ -1,8 +1,7 @@
-package org.cloud.pages;
+package org.cloud.pages.adminUser;
 
-import domain.FieldTypeDTO;
 import domain.History;
-import org.cloud.connectToServer.ServerConn;
+import org.cloud.connectToServer.ConnectToServer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,7 +11,7 @@ import java.util.Iterator;
 /**
  * Created by reza on 8/10/14.
  */
-public class HistoryList extends ServerConn {
+public class HistoryList extends ConnectToServer {
     String[] columnNames = {"ID",
             "Operation Date",
             "Operation Type"};

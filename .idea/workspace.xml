@@ -2,6 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/domain/FieldTypeDTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/temp/dto/FieldTypeDTO.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" afterPath="$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddFunc.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AddUser.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddUser.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/AdminUserHomePage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/ChangePassword.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/ChangePassword.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/HistoryList.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/HistoryList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/UsersList.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/UsersList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/usualUser/UsualUserHomePage.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/WriteHistory.java" afterPath="$PROJECT_DIR$/src/org/cloud/writeHistory/WriteHistory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/Picture.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/Picture.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -72,41 +85,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AddFunc.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java">
+      <file leaf-file-name="AddFunc.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddFunc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="104" selection-start="9332" selection-end="9332" vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="4815">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerConn.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#572#573#0" expanded="false" />
-                <element signature="e#612#613#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/temp/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="1" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginPage.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="0.023847377" vertical-offset="345" max-vertical-offset="2880">
+            <state line="276" column="0" selection-start="12527" selection-end="12527" vertical-scroll-proportion="0.35771066" vertical-offset="3555" max-vertical-offset="4455">
               <folding />
             </state>
           </provider>
@@ -141,26 +123,29 @@
         <option value="$PROJECT_DIR$/src/org/cloud/dto/SectionTypeDTO.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/dto/FieldTypeDTO.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/org/cloud/pages/Picture.java" />
         <option value="$PROJECT_DIR$/src/domain/FieldTypeDTO.java" />
-        <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..HISTORY" />
         <option value="$PROJECT_DIR$/src/domain/History.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/HistoryList.java" />
         <option value="$PROJECT_DIR$/src/temp/tmp/Users.java" />
         <option value="$PROJECT_DIR$/src/domain/Users.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/UsersList.java" />
-        <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..USERS" />
-        <option value="$PROJECT_DIR$/src/org/cloud/pages/AddUser.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/WriteHistory.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/ChangePassword.java" />
-        <option value="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/encryption/MD5.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" />
         <option value="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" />
-        <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..FUNCTIONS" />
         <option value="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" />
         <option value="$PROJECT_DIR$/src/temp/test.java" />
+        <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..USERS" />
+        <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..HISTORY" />
+        <option value="dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..FUNCTIONS" />
+        <option value="$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/pages/AddUser.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/pages/usualUser/UsualUserHomePage.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/pages/Picture.java" />
+        <option value="$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddFunc.java" />
       </list>
     </option>
   </component>
@@ -168,9 +153,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="21" />
+    <option name="y" value="-3" />
     <option name="width" value="1366" />
-    <option name="height" value="747" />
+    <option name="height" value="771" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -200,7 +185,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,7 +217,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="temp" />
+              <option name="myItemId" value="cloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="writeHistory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -256,6 +244,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CloudCalculatorClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CloudCalculatorClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="usualUser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CloudCalculatorClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CloudCalculatorClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cloud" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adminUser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -323,6 +363,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -409,7 +450,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="org.cloud.pages.ChangePassword" />
+      <option name="MAIN_CLASS_NAME" value="org.cloud.pages.adminUser.ChangePassword" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -431,7 +472,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="org.cloud.pages.UsualUserHomePage" />
+      <option name="MAIN_CLASS_NAME" value="org.cloud.pages.usualUser.UsualUserHomePage" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -688,6 +729,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -705,12 +752,6 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <list size="5">
@@ -791,7 +832,16 @@
       <workItem from="1408600108547" duration="1611000" />
       <workItem from="1408619562960" duration="2939000" />
       <workItem from="1408644830668" duration="5724000" />
-      <workItem from="1408726569230" duration="1596000" />
+      <workItem from="1408726569230" duration="4821000" />
+      <workItem from="1408773536670" duration="1824000" />
+      <workItem from="1408784464600" duration="438000" />
+      <workItem from="1408827579351" duration="62000" />
+      <workItem from="1408827732941" duration="631000" />
+      <workItem from="1408895923631" duration="978000" />
+      <workItem from="1408905139497" duration="1171000" />
+      <workItem from="1409049103064" duration="396000" />
+      <workItem from="1409052935144" duration="2636000" />
+      <workItem from="1409060668990" duration="787000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -933,11 +983,15 @@
       <created>1408730034268</created>
       <updated>1408730034268</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Initial commit&#10;">
+      <created>1408730042369</created>
+      <updated>1408730042369</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160790000" />
+    <option name="totallyTimeSpent" value="172938000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -960,7 +1014,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="21" width="1366" height="747" extended-state="6" />
+    <frame x="0" y="-3" width="1366" height="771" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -982,7 +1036,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22356495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23413897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35060975" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -993,10 +1047,10 @@
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2326284" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2326284" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1014,8 +1068,8 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23942599" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.22408536" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23942599" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1042,6 +1096,27 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddFunc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="210" column="71" selection-start="9382" selection-end="9382" vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="4800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="28" selection-start="0" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="525">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="117" selection-start="4973" selection-end="5668" vertical-scroll-proportion="0.0" vertical-offset="2115" max-vertical-offset="2865">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="5" selection-start="5189" selection-end="5189" vertical-scroll-proportion="0.0" vertical-offset="2010" max-vertical-offset="2250">
@@ -1049,7 +1124,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/usualUser/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding />
@@ -1063,14 +1138,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="19" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="510">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="false" />
-            <element signature="e#612#613#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,7 +1152,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/usualUser/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding />
@@ -1095,14 +1166,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="435">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="false" />
-            <element signature="e#612#613#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1113,7 +1180,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/usualUser/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="51" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1140">
           <folding />
@@ -1127,14 +1194,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="435">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="false" />
-            <element signature="e#612#613#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,7 +1208,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/usualUser/UsualUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="49" selection-start="1659" selection-end="1659" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1125">
           <folding />
@@ -1159,14 +1222,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="495">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="false" />
-            <element signature="e#612#613#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,16 +1299,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/temp/Clock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="25" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="8" max-vertical-offset="615" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/temp/dto/FieldTypeDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="341" selection-end="341" vertical-scroll-proportion="0.22575517" vertical-offset="83" max-vertical-offset="780" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../HexConvertor/src/org/readfile/io/ClearInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="27" selection-start="321" selection-end="321" vertical-scroll-proportion="-1.1446741" vertical-offset="855" max-vertical-offset="1515" />
@@ -1260,23 +1309,6 @@
         <state line="715" column="22" selection-start="30278" selection-end="30278" vertical-scroll-proportion="0.33279222" vertical-offset="9725" max-vertical-offset="37830">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/FieldTypeDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="780">
-          <folding>
-            <element signature="e#651#652#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..HISTORY">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/History.java">
@@ -1298,57 +1330,35 @@
         <state line="49" column="16" selection-start="975" selection-end="975" vertical-scroll-proportion="0.6200318" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..USERS">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AddUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="4" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/ChangePassword.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/ChangePassword.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="101" column="5" selection-start="4194" selection-end="4194" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/HistoryList.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/HistoryList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="4" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/Picture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="34" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsersList.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/UsersList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="4" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/WriteHistory.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/writeHistory/WriteHistory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="46" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/AdminUserHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="91" column="48" selection-start="3220" selection-end="3220" vertical-scroll-proportion="0.0" vertical-offset="1022" max-vertical-offset="2070">
           <folding />
@@ -1362,49 +1372,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="21" selection-start="8085" selection-end="8085" vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="5235">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..FUNCTIONS">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
-      </provider>
+    <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..USERS">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="104" selection-start="9332" selection-end="9332" vertical-scroll-proportion="0.0" vertical-offset="2790" max-vertical-offset="4455">
-          <folding />
-        </state>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#572#573#0" expanded="false" />
-            <element signature="e#612#613#0" expanded="false" />
-          </folding>
-        </state>
+    <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..HISTORY">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/temp/test.java">
+    <entry file="dbDummy://dbtable:/937005e0/ceda447c-958a-4168-9658-f6cc141c5608/finalProject..FUNCTIONS">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="1" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+        <state line="142" column="117" selection-start="5027" selection-end="5722" vertical-scroll-proportion="0.0" vertical-offset="2130" max-vertical-offset="3135">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="0.023847377" vertical-offset="345" max-vertical-offset="2880">
+        <state line="192" column="25" selection-start="7446" selection-end="7446" vertical-scroll-proportion="0.0" vertical-offset="2264" max-vertical-offset="2895">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0" vertical-offset="149" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="28" selection-start="0" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/usualUser/UsualUserHomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="9" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5235">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/Picture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="3" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddFunc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="276" column="0" selection-start="12527" selection-end="12527" vertical-scroll-proportion="0.35771066" vertical-offset="3555" max-vertical-offset="4455">
           <folding />
         </state>
       </provider>

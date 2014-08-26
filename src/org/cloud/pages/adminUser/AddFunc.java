@@ -1,7 +1,7 @@
-package org.cloud.pages;
+package org.cloud.pages.adminUser;
 
-import com.sun.jndi.url.rmi.rmiURLContext;
-import org.cloud.connectToServer.ServerConn;
+import org.cloud.connectToServer.ConnectToServer;
+import org.cloud.writeHistory.WriteHistory;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 /**
  * Created by reza on 8/4/14.
  */
-public class AddFunc extends ServerConn{
+public class AddFunc extends ConnectToServer {
 
     public JFrame addFuncFrame;
     public JTextField funcName=new JTextField(20);
@@ -235,7 +235,7 @@ public class AddFunc extends ServerConn{
                                         }
                                     }else
                                     {
-                                        JOptionPane.showMessageDialog(new JFrame(), "Method Not Added", "Info",
+                                        JOptionPane.showMessageDialog(new JFrame(), "Method Not Added,Compile Error", "Info",
                                                 JOptionPane.ERROR_MESSAGE);
                                     }
                                 }

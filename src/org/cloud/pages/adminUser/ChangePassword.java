@@ -1,8 +1,8 @@
-package org.cloud.pages;
+package org.cloud.pages.adminUser;
 
-import com.sun.swing.internal.plaf.metal.resources.metal_sv;
-import org.cloud.connectToServer.ServerConn;
+import org.cloud.connectToServer.ConnectToServer;
 import org.cloud.encryption.MD5;
+import org.cloud.writeHistory.WriteHistory;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  * Created by reza on 8/7/14.
  */
 
-public class ChangePassword extends ServerConn {
+public class ChangePassword extends ConnectToServer {
     public JFrame changePasswdFrame;
     public JButton changePasswdBtn;
 

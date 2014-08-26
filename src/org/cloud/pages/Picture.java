@@ -15,7 +15,6 @@ public class Picture extends Canvas{
         jPanel.setVisible(true);
     }
 
-
     public void paint(Graphics g) {
 
         Toolkit t=Toolkit.getDefaultToolkit();

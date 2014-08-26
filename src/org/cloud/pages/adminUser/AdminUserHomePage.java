@@ -1,6 +1,8 @@
-package org.cloud.pages;
+package org.cloud.pages.adminUser;
 
-import org.cloud.connectToServer.ServerConn;
+import org.cloud.connectToServer.ConnectToServer;
+import org.cloud.pages.usualUser.UsualUserHomePage;
+import org.cloud.writeHistory.WriteHistory;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +15,7 @@ import java.util.TimerTask;
 /**
  * Created by reza on 8/4/14.
  */
-public class AdminUserHomePage extends ServerConn{
+public class AdminUserHomePage extends ConnectToServer {
 
     public AddUser addUser;
     //public AddFunc addFunc;

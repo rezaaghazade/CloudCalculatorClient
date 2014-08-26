@@ -1,11 +1,11 @@
-package org.cloud.pages;
+package org.cloud.writeHistory;
 
-import org.cloud.connectToServer.ServerConn;
+import org.cloud.connectToServer.ConnectToServer;
 
 /**
  * Created by reza on 8/6/14.
  */
-public class WriteHistory extends ServerConn {
+public class WriteHistory extends ConnectToServer {
     public void write(String opName,String id)
     {
         try {

@@ -1,7 +1,8 @@
-package org.cloud.pages;
+package org.cloud.pages.adminUser;
 
-import org.cloud.connectToServer.ServerConn;
+import org.cloud.connectToServer.ConnectToServer;
 import org.cloud.encryption.MD5;
+import org.cloud.writeHistory.WriteHistory;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +15,7 @@ import java.util.regex.Pattern;
 /**
  * Created by reza on 8/4/14.
  */
-public class AddUser extends ServerConn{
+public class AddUser extends ConnectToServer {
     public JFrame addUserFrame;
     public JButton createUserBtn;
     JTextField userName=new JTextField(20);

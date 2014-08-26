@@ -1,7 +1,10 @@
 package org.cloud.pages;
 
-import org.cloud.connectToServer.ServerConn;
+import org.cloud.connectToServer.ConnectToServer;
 import org.cloud.encryption.MD5;
+import org.cloud.pages.adminUser.AdminUserHomePage;
+import org.cloud.pages.usualUser.UsualUserHomePage;
+import org.cloud.writeHistory.WriteHistory;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +21,8 @@ import java.util.regex.Pattern;
  * Time: 8:02 PM
  * To change this template use File | Settings | File Templates.
  */
-public class LoginPage extends ServerConn {
+
+public class LoginPage extends ConnectToServer {
 
     public JFrame loginFrame;
     public JTextField userNameTextField;

@@ -1,7 +1,8 @@
-package org.cloud.pages;
+package org.cloud.pages.usualUser;
 
-import domain.FieldTypeDTO;
-import org.cloud.connectToServer.ServerConn;
+import domain.Function;
+import org.cloud.connectToServer.ConnectToServer;
+import org.cloud.writeHistory.WriteHistory;
 import se.datadosen.component.RiverLayout;
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +17,7 @@ import java.util.TimerTask;
  * Created by reza on 7/23/14.
  */
 
-public class UsualUserHomePage extends ServerConn {
+public class UsualUserHomePage extends ConnectToServer {
 
     public JFrame introFrame;
     public JLabel informationlable;
@@ -26,8 +27,8 @@ public class UsualUserHomePage extends ServerConn {
     public JPanel jTextFieldPanel=new JPanel();
     public JTextField jTextField[];
     public JButton calcBtn=new JButton("Calculate !");
-    public FieldTypeDTO currentFieldTypeObj=new FieldTypeDTO();
-    public ArrayList<FieldTypeDTO> functionsInfo = new ArrayList<FieldTypeDTO>();
+    public Function currentFieldTypeObj=new Function();
+    public ArrayList<Function> functionsInfo = new ArrayList<Function>();
     public ArrayList<String> fieldTypesArrayList = new ArrayList<String>();
     public HashMap<String,ArrayList> funcGroupedByFieldsArrayList =new HashMap<String, ArrayList>();
     public JPanel jRadioButtonsPanel=new JPanel();
@@ -92,7 +93,7 @@ public class UsualUserHomePage extends ServerConn {
 
         try {
             getServerApplication().newInstance("org.cloud.database.GetFunctionsDetail");
-            functionsInfo= (ArrayList<FieldTypeDTO>) getServerApplication().invokeMethod("GetDetail");
+            functionsInfo= (ArrayList<Function>) getServerApplication().invokeMethod("GetDetail");
             System.out.println();
 
         } catch (Exception e) {
@@ -148,7 +149,7 @@ public class UsualUserHomePage extends ServerConn {
                                     descriptionJtextArea.setEditable(false);
                                     descriptionJtextArea.setVisible(true);
                                     descriptionlable.setVisible(true);
-                                    FieldTypeDTO ftd=new FieldTypeDTO();
+                                    Function ftd=new Function();
                                     ftd=findFieldType(item,rd.getText());
                                     currentFieldTypeObj=ftd;
                                     descriptionJtextArea.setText(ftd.getFuncPrototype()+"\n"+ftd.getDescription());
@@ -230,11 +231,11 @@ public class UsualUserHomePage extends ServerConn {
     }
 
     public void defineSectionType() {
-        FieldTypeDTO sectionTypeDTO = new FieldTypeDTO();
+        Function sectionTypeDTO = new Function();
         int i = 0;
         String tmp;
         while (i < functionsInfo.size()) {
-            sectionTypeDTO = (FieldTypeDTO) functionsInfo.get(i);
+            sectionTypeDTO = (Function) functionsInfo.get(i);
             tmp = sectionTypeDTO.getFieldType();
             //System.out.println(tmp);
             if (!fieldTypesArrayList.contains(tmp))
@@ -261,7 +262,7 @@ public class UsualUserHomePage extends ServerConn {
             fieldName=fieldTypesArrayList.get(i);
             while (j<functionsInfo.size())
             {
-                String tmpField=((FieldTypeDTO) functionsInfo.get(j)).getFieldType();
+                String tmpField=((Function) functionsInfo.get(j)).getFieldType();
                 if (fieldName.equals(tmpField))
                 {
                     tempArrayList.add(functionsInfo.get(j));
@@ -304,19 +305,19 @@ public class UsualUserHomePage extends ServerConn {
             calcBtn.setEnabled(false);
     }
 
-    public FieldTypeDTO findFieldType(String itemSelected,String funName) {
+    public Function findFieldType(String itemSelected,String funName) {
         int index=0;
         ArrayList arrayList=new ArrayList();
-        FieldTypeDTO fieldTypeDTO=new FieldTypeDTO();
+        Function function =new Function();
         while (index<funcGroupedByFieldsArrayList.get(itemSelected).size())
         {
-            if (((FieldTypeDTO)funcGroupedByFieldsArrayList.get(itemSelected).get(index)).getFuncName()==funName)
+            if (((Function)funcGroupedByFieldsArrayList.get(itemSelected).get(index)).getFuncName()==funName)
             {
-                fieldTypeDTO=((FieldTypeDTO)funcGroupedByFieldsArrayList.get(itemSelected).get(index));
+                function =((Function)funcGroupedByFieldsArrayList.get(itemSelected).get(index));
             }
             index++;
         }
-        return fieldTypeDTO;
+        return function;
     }
 
     public ArrayList<String> getFuncName(ArrayList arr) {
@@ -324,7 +325,7 @@ public class UsualUserHomePage extends ServerConn {
         int index=0;
         while (index<arr.size())
         {
-            tmp.add(((FieldTypeDTO)arr.get(index)).getFuncName());
+            tmp.add(((Function)arr.get(index)).getFuncName());
             index++;
         }
         return tmp;
