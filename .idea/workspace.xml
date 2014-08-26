@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="819a8f14-e271-4610-9503-ec8061a4074c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/domain/FieldTypeDTO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/temp/dto/FieldTypeDTO.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/connectToServer/ServerConn.java" afterPath="$PROJECT_DIR$/src/org/cloud/connectToServer/ConnectToServer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AddFunc.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddFunc.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AddUser.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/AddUser.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/AdminUserHomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/AdminUserHomePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/ChangePassword.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/ChangePassword.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/HistoryList.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/HistoryList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/UsersList.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/adminUser/UsersList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/UsualUserHomePage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/usualUser/UsualUserHomePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/org/cloud/pages/WriteHistory.java" afterPath="$PROJECT_DIR$/src/org/cloud/writeHistory/WriteHistory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/cloud/pages/Picture.java" afterPath="$PROJECT_DIR$/src/org/cloud/pages/Picture.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CloudCalculatorClient.iws" />
@@ -841,7 +828,7 @@
       <workItem from="1408905139497" duration="1171000" />
       <workItem from="1409049103064" duration="396000" />
       <workItem from="1409052935144" duration="2636000" />
-      <workItem from="1409060668990" duration="787000" />
+      <workItem from="1409060668990" duration="807000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit&#10;">
       <created>1406111834853</created>
@@ -987,11 +974,15 @@
       <created>1408730042369</created>
       <updated>1408730042369</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Initial commit&#10;">
+      <created>1409061474119</created>
+      <updated>1409061474119</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172938000" />
+    <option name="totallyTimeSpent" value="172958000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
